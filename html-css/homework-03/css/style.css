@@ -1,12 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
 body{
-font-family: 'PlayfarirDisplay' , "arial" , serif;
-color: #626262;
-font-size: 14px;
-line-height: 24px;
+    font-family: 'Playfair Display', 'Arial', serif;
+    color: #626262;
+    font-size: 0px;
+    line-height: 24px;
+    padding: 1px;
+}
+
+.wrapper{
+margin: 70px 150px ;
+}
+
+.page-header {
+    margin: 0px 142px 97px 134px;
 }
 
 .site-navigation{
-list-style: none;
+    list-style: none;
+    text-align: center;
+    font-size: 14px;
+    
+
 }
 
 .site-navigation a{
@@ -16,8 +36,10 @@ list-style: none;
 }
 
 .container {
-    list-style: none;  
+    list-style: none;
 }
+
+
 
 .article-img-title {
     font-family: 'PlayfarirDisplay' , "arial" , sans-serif;
@@ -29,5 +51,54 @@ list-style: none;
     font-size: 30px;
     line-height: 36px;
     
+}
 
+.menu-item {
+    display: inline-block;
+    width: 113px;
+    text-align: center;    
+}
+.one {
+    margin-right: 87px;
+}
+
+.two {
+    margin-right: 56px;
+}
+.tree {
+    margin-right: 29px;
+}
+
+
+.article{
+    font-size: 14px;
+    display: inline-block;
+    width: 420px;
+    
+}
+.footer-page{
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.footer-page a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #626262;
+}
+img {
+    margin-bottom: 29px;
+}
+.article-img-title{
+    margin-bottom: 22px;
+}
+.article-title{
+    margin-bottom: 28px;
+}
+.article-text{
+    margin-bottom: 129px;
+}
+
+.article{
+    margin-left: 61px;
 }
