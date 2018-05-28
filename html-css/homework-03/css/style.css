@@ -1,0 +1,33 @@
+body{
+font-family: 'PlayfarirDisplay' , "arial" , serif;
+color: #626262;
+font-size: 14px;
+line-height: 24px;
+}
+
+.site-navigation{
+list-style: none;
+}
+
+.site-navigation a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #626262;
+}
+
+.container {
+    list-style: none;  
+}
+
+.article-img-title {
+    font-family: 'PlayfarirDisplay' , "arial" , sans-serif;
+    color: #b4ad9e;
+    line-height: 17px;
+
+}
+.article-title {
+    font-size: 30px;
+    line-height: 36px;
+    
+
+}
