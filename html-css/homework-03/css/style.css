@@ -76,16 +76,7 @@ margin: 70px 150px ;
     width: 420px;
     
 }
-.footer-page{
-    font-size: 20px;
-    line-height: 24px;
-}
 
-.footer-page a{
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #626262;
-}
 img {
     margin-bottom: 29px;
 }
@@ -101,4 +92,21 @@ img {
 
 .article{
     margin-left: 61px;
+}
+button{
+    display: inline-block;
+    box-sizing: content-box;
+    padding: 18px 34px;
+    background-color: #ffffff;
+    border: 2px #626262 solid;
+    width: 164px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 368px;
+}
+
+
+.footer-page a{
+    text-decoration: none;
+    color: #626262;
 }
