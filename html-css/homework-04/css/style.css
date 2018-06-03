@@ -1,58 +1,190 @@
-font-family: 'Roboto', sans-serif;
-font-family: 'Open Sans', sans-serif;
-
-*
-{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-size: 0px;
 }
 
 .menu {
-    list-style: none;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    line-height: 11px;
-    font-weight: 700;
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 11px;
+  font-weight: 700;
 }
 
-.menu a{
-    text-decoration: none;
-    text-transform: uppercase;
-    color:#0f0101;
+.menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #0f0101;
 }
-.left a{
-    font-family: 'Roboto', sans-serif;
-    font-size:30px;
-    line-height: 32px;
-    color:#555252;
+.logo {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  line-height: 32px;
+  font-weight: 300;
+}
+.logo a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #555252;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  line-height: 32px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.product-info {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 40px;
+  color: #ffffff;
+  font-weight: 900;
+  background-color: rgb(50, 50, 50);
+}
+
+.product-info-price {
+  background-color: rgb(140, 140, 140);
+}
+.product-catalog-menu-item:hover div {
+  background-color: #1abc9c;
+}
+.product-catalog-menu-item:focus div {
+  background-color: #1abc9c;
+}
+.product-catalog-menu-item:hover .product-info-price {
+  background-color: #7fd9c7;
+}
+.product-catalog-menu-item:focus .product-info-price {
+  background-color: #7fd9c7;
+}
+
+.news-list-item {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+}
+.news-list-text {
+  font-size: 14px;
+  font-weight: 400;
+}
+.button {
+  font-size: 16px;
+  font-weight: 300px;
+}
+
+.wrapper {
+  width: 1110px;
+  margin: 41px auto 0;
+}
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.product-catalog-menu-item {
+  width: 255px;
+  height: 320px;
+  float: left;
+}
+
+.product-info-desc {
+  float: left;
+  margin-left: 14px;
+  background-color: ;
+}
+.product-info-price {
+  float: right;
+  width: 54px;
+  text-align: center;
+}
+
+.news-list-item {
+  width: 350px;
+  height: 494px;
+  float: left;
+}
+.news-list-title::before {
+  content: "";
+  display: inline-block;
+  width: 350px;
+  height: 260px;
+}
+.first-news::before {
+  background-image: url(../img/News_1.jpg);
+}
+
+.second-news::before {
+  background-image: url(../img/News_2.jpg);
+}
+
+.the-third-news::before {
+  background-image: url(../img/News_3.jpg);
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.menu-item {
+  float: right;
+}
+
+.logo {
+  float: left;
+}
+.logo::first-letter {
+  color: #1abc9c;
+  font-weight: 900;
+}
+.menu-item {
+  padding-left: 33px;
+}
+.menu-item:last-child {
+  padding-left: 0px;
+}
+
+.menu-item a:hover {
+  color: #1abc9c;
+}
+.menu-item a:focus {
+  color: #1abc9c;
+}
+
+h2::after{
+    display: block;
+    content:'';
+    width: 164px;
+    height: 7px;
+    background-color: rgb(78, 198, 171);
+    margin: auto;
+}
+h4::after{
+    display: block;
+    content:'';
+    width: 136px;
+    height: 3px;
+    background-color: rgb(78, 198, 171);
+}
+button{
+    width: 160px;
+    height: 50px;
+    background-color: rgb(78, 198, 171);
+    color:#ffffff;
+    font-family: "Open Sans", sans-serif;
     font-weight: 300;
-}
-h2{
-    font-family: 'Roboto', sans-serif;
-    font-size: 48px;
-    line-height: 32px;
-    font-weight: 900;
-}
-
-.product-info{
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    line-height: 32px;
-    color: #ffffff;
-    font-weight: 900;
-}
-.news-list-item{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 26px;
-    font-weight: 600;
-}
-.news-list-text{
-    font-size: 14px;
-    font-weight: 400;
-}
-.button{
-    font-size:16px;
-    font-weight: 300px;
+    border: 0px solid;
+    border-radius: 4px;
+
 }
