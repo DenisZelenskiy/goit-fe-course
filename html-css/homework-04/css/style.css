@@ -1,0 +1,58 @@
+font-family: 'Roboto', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.menu {
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 11px;
+    font-weight: 700;
+}
+
+.menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#0f0101;
+}
+.left a{
+    font-family: 'Roboto', sans-serif;
+    font-size:30px;
+    line-height: 32px;
+    color:#555252;
+    font-weight: 300;
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    line-height: 32px;
+    font-weight: 900;
+}
+
+.product-info{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    color: #ffffff;
+    font-weight: 900;
+}
+.news-list-item{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+}
+.news-list-text{
+    font-size: 14px;
+    font-weight: 400;
+}
+.button{
+    font-size:16px;
+    font-weight: 300px;
+}
