@@ -70,6 +70,7 @@ h2 {
   font-size: 18px;
   line-height: 26px;
   font-weight: 600;
+  color: #555252;
 }
 .news-list-text {
   font-size: 14px;
@@ -116,6 +117,7 @@ ul {
   display: inline-block;
   width: 350px;
   height: 260px;
+  margin-bottom:21px;
 }
 .first-news::before {
   background-image: url(../img/News_1.jpg);
@@ -166,16 +168,21 @@ h2::after{
     width: 164px;
     height: 7px;
     background-color: rgb(78, 198, 171);
-    margin: auto;
+    margin: 32px auto 92px;
+}
+.news-title::after{
+    margin: 32px auto 80px;
 }
 h4::after{
     display: block;
     content:'';
     width: 136px;
     height: 3px;
+    margin: 21px 0px 38px;
     background-color: rgb(78, 198, 171);
+    
 }
-button{
+.button{
     width: 160px;
     height: 50px;
     background-color: rgb(78, 198, 171);
@@ -186,5 +193,34 @@ button{
     line-height: 26px;
     border: 0px solid;
     border-radius: 4px;
+}
 
+.page-header{
+    margin-bottom:111px;
+}
+
+.product-catalog-menu-item{
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.product-catalog-menu-item:nth-child(4n+4){
+    margin-right: 0px;
+}
+.product-catalog-menu-item:nth-child(n+4){
+    margin-bottom:0px;
+}
+.news{
+    margin-top: 106px;
+}
+.news-list-item{
+    margin-right: 30px;
+}
+.news-list-item:last-child{
+    margin-right: 0px;
+}
+.news-list-text{
+    margin-bottom:26px;
+}
+.button{
+    margin-bottom:82px;
 }
