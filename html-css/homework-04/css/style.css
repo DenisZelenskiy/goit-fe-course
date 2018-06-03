@@ -39,6 +39,7 @@ h2 {
   font-weight: 900;
   text-align: center;
   color:#555252;
+  text-transform: uppercase;
 }
 
 .product-info {
@@ -48,6 +49,7 @@ h2 {
   color: #ffffff;
   font-weight: 900;
   background-color: rgb(50, 50, 50);
+  text-transform: uppercase;
 }
 
 .product-info-price {
@@ -84,7 +86,7 @@ h2 {
 
 .wrapper {
   width: 1110px;
-  margin: 41px auto 0;
+  margin: 41px auto 82px;
 }
 ul {
   list-style: none;
@@ -118,7 +120,7 @@ ul {
   display: inline-block;
   width: 350px;
   height: 260px;
-  margin-bottom:21px;
+  margin-bottom:15px;
 }
 .first-news::before {
   background-image: url(../img/News_1.jpg);
@@ -179,7 +181,7 @@ h4::after{
     content:'';
     width: 136px;
     height: 3px;
-    margin: 21px 0px 38px;
+    margin: 15px 0px 29px;
     background-color: rgb(78, 198, 171);
     
 }
@@ -211,7 +213,7 @@ h4::after{
     margin-bottom:0px;
 }
 .news{
-    margin-top: 106px;
+    margin-top: 105px;
 }
 .news-list-item{
     margin-right: 30px;
@@ -220,8 +222,5 @@ h4::after{
     margin-right: 0px;
 }
 .news-list-text{
-    margin-bottom:26px;
-}
-.button{
-    margin-bottom:82px;
+    margin-bottom:20px;
 }
