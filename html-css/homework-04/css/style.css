@@ -14,6 +14,7 @@ body {
   line-height: 11px;
   font-weight: 700;
   letter-spacing: -0.02em;
+  float: right;
 }
 
 .menu a {
@@ -100,7 +101,6 @@ ul {
 
 .product-catalog-menu-item {
   width: 255px;
-  height: 320px;
   float: left;
 }
 
@@ -146,7 +146,7 @@ ul {
 }
 
 .menu-item {
-  float: right;
+  float: left;
 }
 
 .logo {
@@ -157,10 +157,10 @@ ul {
   font-weight: 900;
 }
 .menu-item {
-  padding-left: 33px;
+  margin-left: 37px;
 }
-.menu-item:last-child {
-  padding-left: 0px;
+.menu-item:first-child {
+  margin-left: 0px;
 }
 
 .menu-item a:hover {
@@ -191,8 +191,7 @@ h4::after{
     
 }
 .button{
-    width: 160px;
-    height: 50px;
+    padding:16px 45px;
     background-color: rgb(78, 198, 171);
     color:#ffffff;
     font-family: "Open Sans", sans-serif;
