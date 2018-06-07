@@ -44,6 +44,7 @@ h2 {
   color:#555252;
   text-transform: uppercase;
   letter-spacing: -0.02em;
+  margin-bottom:92px;
 }
 
 .product-info {
@@ -63,13 +64,13 @@ h2 {
 .product-catalog-menu-item:hover div {
   background-color: #1abc9c;
 }
-.product-catalog-menu-item:focus div {
+.product-catalog-menu-item:focus >div {
   background-color: #1abc9c;
 }
 .product-catalog-menu-item:hover .product-info-price {
   background-color: #7fd9c7;
 }
-.product-catalog-menu-item:focus .product-info-price {
+.product-catalog-menu-item:focus >.product-info-price {
   background-color: #7fd9c7;
 }
 
@@ -92,7 +93,9 @@ h2 {
 
 .wrapper {
   width: 1110px;
-  margin: 41px auto 82px;
+  
+  margin:auto;
+  padding: 41px 0px 82px;
 }
 ul {
   list-style: none;
@@ -102,12 +105,13 @@ ul {
 .product-catalog-menu-item {
   width: 255px;
   float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .product-info-desc {
   float: left;
   margin-left: 14px;
-  background-color: ;
 }
 .product-info-price {
   float: right;
@@ -147,6 +151,7 @@ ul {
 
 .menu-item {
   float: left;
+  margin-left: 37px;
 }
 
 .logo {
@@ -156,9 +161,7 @@ ul {
   color: #1abc9c;
   font-weight: 900;
 }
-.menu-item {
-  margin-left: 37px;
-}
+
 .menu-item:first-child {
   margin-left: 0px;
 }
@@ -176,11 +179,9 @@ h2::after{
     width: 164px;
     height: 7px;
     background-color: rgb(78, 198, 171);
-    margin: 32px auto 92px;
+    margin: 32px auto 0px;
 }
-.news-title::after{
-    margin: 32px auto 80px;
-}
+
 h4::after{
     display: block;
     content:'';
@@ -207,10 +208,7 @@ h4::after{
     margin-bottom:111px;
 }
 
-.product-catalog-menu-item{
-    margin-right: 30px;
-    margin-bottom: 30px;
-}
+
 .product-catalog-menu-item:nth-child(4n+4){
     margin-right: 0px;
 }
