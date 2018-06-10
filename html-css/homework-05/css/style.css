@@ -1,0 +1,161 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+
+
+.wrapper{
+    padding-top: 36px;
+}
+.page-header{
+    width: 1110px;
+    margin: auto;
+    margin-bottom: 34px;
+}
+
+.nav_menu {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    line-height: 11px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    float: right;
+    
+    
+  }
+.nav_menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #0f0101;
+  }
+.logo {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    display: inline-block;
+  }
+.logo a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #555252;
+  }
+  
+.clearfix:after{
+    display: table;
+    clear: both;
+    content: "";
+}
+
+ .nav_menu{
+     float: right;
+     list-style: none;
+     
+ }
+ .nav_menu_item{
+     float:left;
+     padding-right: 37px;
+ }
+ .nav_menu_item:last-child{
+     padding-right: 0px;
+ }
+ .logo::first-letter{
+     color: #1abc9c;
+     font-weight: 900;
+ }
+ .news_container{
+     width: 1110px;
+     margin: auto;
+     font-family: "Roboto", sans-serif;
+     letter-spacing: -0.02em;
+     color:#ffffff;
+     text-transform: uppercase;
+     text-align: center;
+     position: relative;
+     padding-top: 220px;
+     
+ }
+ .news_title {
+    font-size: 60px;
+    line-height: 82px;
+    font-weight: 900;
+    
+  }
+  .news_info{
+    font-size: 24px;
+    line-height: 54px;
+  }
+
+ .news{
+     width: 100%;
+     height: 600px;
+     background-image: url(../img/main_image.jpg);
+     background-size: cover;
+     
+ }
+ .btn_news{
+     display: inline-block;
+     width: 104px;
+     height: 104px;
+     border: none;
+     position: absolute;
+     padding: 0;
+     margin: 0;
+     background-color: #4f9c8b;
+     background-repeat: no-repeat;
+     background-position: center;
+     top:50%;
+     transform: translateY(55%);
+     
+ }
+.left{
+    background-image: url(../img/icons/005-angle.png);
+    left:0px;
+   
+}
+
+.right{
+    background-image: url(../img/icons/006-right-arrow-angle.png);
+    right: 0px;
+
+}
+.btn_news:hover{
+    background-color: #1abc9c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* visually-hidden helper */
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0px;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+}
