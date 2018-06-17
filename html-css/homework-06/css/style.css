@@ -1,0 +1,98 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat' , 'Arial' , sans-serif;
+    color: #333333;
+}
+.wrapper{
+    width: 1200px;
+}
+/* Header styling */
+.logo-link{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #95e1d3;
+}
+.hdr-menu{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.hdr-item-link{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #95e1d3;
+    text-decoration: none;
+}
+/* Title section styling (h2,h4) */
+.title-section-about{
+    font-family: 'Kaushan Script', 'Arial', cursive;
+    font-size: 24px;
+    line-height: 29px;
+    
+}
+.title-section{
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    
+}
+/* Section service styling */
+.title-item{
+    font-size:14px;
+    line-height: 17px;
+}
+.text-item{
+   font-family: 'Roboto', sans-serif;
+   font-size: 15px;
+   line-height: 24px;
+   color: #999999;
+}
+/* Section team styling */
+.section-team-text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    color: #999999;
+}
+.team-item-title{
+    font-size: 14px;
+    line-height: 17px;
+}
+.team-item-text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 300i;
+    color: #999999;
+}
+/* Footer page styling */
+.footer-page{
+    font-size: 14px;
+    line-height: 17px;
+}
+
+
+/* Visually-hidden */
+  /* visually-hidden helper */
+  .visually-hidden:not(:focus):not(:active),
+  input[type='checkbox'].visually-hidden,
+  input[type='radio'].visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0px;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+  }
