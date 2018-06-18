@@ -235,6 +235,7 @@ body {
 .wrapper-team-img:hover .block-links {
     opacity: 1;
     transition-duration: 1.3s;
+    transition-timing-function: linear;
 }
 .wrapper-team-img:hover .team-image {
     opacity: 0.2;
@@ -245,10 +246,12 @@ body {
     background-color: #95e1d3;
     transition-duration: 0.9s;
     transform: skew(45deg,180deg);
+    transition-timing-function: ease-out;
 }
 .wrapper-team-img:hover {
     transform:translate(-10px,-10px);
     transition-duration: 1s;
+    transition-timing-function: ease;
 }
 /* Footer styling */
 .footer-page {
@@ -258,9 +261,13 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 11px 0px;
+    align-items: center;
 }
 .footer-signature-style{
     color: #f59494;
+}
+.footer-active {
+    display: flex;
 }
 input {
     font-family: "Roboto" , sans-serif;
@@ -268,9 +275,52 @@ input {
     line-height: 24px;
     font-style: italic;
     color: #cccccc;
-    padding: 15px 140px 13px 13px;
-    
+    padding: 15px 55px 13px 13px;
+    border: 1px solid #cccccc;
+    border-right: 0px;
 }
+.footer-button {
+    font-family: 'Montserrat' , 'Arial' , sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    background-color: #95e1d3;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+    padding: 14px 33px;
+}
+/* ANNIMATION EFFect */
+.logo {
+    animation: pulsing 2s infinite;
+}
+@keyframes pulsing {
+    0% {
+        transform: scale(0.5, 0.5);
+    }
+    50% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(0.5, 0.5);
+    }
+}
+
+.footer-button {
+    animation: background-c 3s infinite;
+}
+@keyframes background-c {
+    0% {
+        background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
+    }
+    50% {
+        background: linear-gradient(to right, #fdfc47, #24fe41);
+    }
+    100% {
+        background: linear-gradient(to right, #00c6ff, #0072ff);
+    }
+}
+
   /* visually-hidden helper */
   .visually-hidden:not(:focus):not(:active),
   input[type='checkbox'].visually-hidden,
@@ -288,4 +338,17 @@ input {
   }
 
 
-  
+  .logo {
+      animation: pulsing 2s infinite;
+  }
+  @keyframes pulsing {
+      0% {
+          transform: scale(0.5, 0.5);
+      }
+      50% {
+          transform: scale(1, 1);
+      }
+      100% {
+          transform: scale(0.5, 0.5);
+      }
+  }
