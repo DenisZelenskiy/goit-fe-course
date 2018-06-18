@@ -116,17 +116,17 @@ body {
     list-style: none;
     display: flex; 
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .service-menu-item {
     flex-basis: 360px;
-    /* margin-right: 35px; */
     margin-bottom: 60px;
     background-repeat: no-repeat;
     padding-left: 60px;
 }
-.service-menu-item:not(:nth-child(3n)){
-    margin-right: 35px;
-}
+/* .service-menu-item:not(:nth-child(3n)){
+    margin-right: 35px; 
+}*/
 .service-menu-item:nth-child(1) {
     background-image: url(../img/png/ALARM.png);
 }
