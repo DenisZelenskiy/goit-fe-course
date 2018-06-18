@@ -284,7 +284,9 @@ input {
     font-size: 14px;
     font-weight: 700;
     line-height: 17px;
-    background-color: #95e1d3;
+    cursor: pointer;
+    background: linear-gradient(to right,  #5433ff, #20bdff, #a5fecb);
+    background-position: 0 0;
     text-transform: uppercase;
     color: #ffffff;
     border: none;
@@ -310,14 +312,8 @@ input {
     animation: background-c 3s infinite;
 }
 @keyframes background-c {
-    0% {
-        background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
-    }
-    50% {
-        background: linear-gradient(to right, #fdfc47, #24fe41);
-    }
     100% {
-        background: linear-gradient(to right, #00c6ff, #0072ff);
+        background-position: 150px 0px;
     }
 }
 
@@ -337,18 +333,3 @@ input {
       overflow: hidden;
   }
 
-
-  .logo {
-      animation: pulsing 2s infinite;
-  }
-  @keyframes pulsing {
-      0% {
-          transform: scale(0.5, 0.5);
-      }
-      50% {
-          transform: scale(1, 1);
-      }
-      100% {
-          transform: scale(0.5, 0.5);
-      }
-  }
