@@ -242,8 +242,8 @@ body {
 .team-link:hover {
     transition-property: all;
     background-color: #95e1d3;
-    transition-duration: 0.9s;
-    transform: skew(45deg,180deg);
+    transition-duration: 0.7s;
+    transform: skew(180deg,180deg);
     transition-timing-function: ease-out;
 }
 .wrapper-team-img:hover {
@@ -300,7 +300,7 @@ input {
 }
 @keyframes pulsing {
     0% {
-        transform: scale(0.5, 0.5);
+        transform:translateX(30px) scale(0.5, 0.5);
     }
     50% {
         transform: scale(1, 1);
