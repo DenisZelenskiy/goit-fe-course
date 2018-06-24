@@ -242,8 +242,8 @@ body {
 .team-link:hover {
     transition-property: all;
     background-color: #95e1d3;
-    transition-duration: 0.9s;
-    transform: skew(45deg,180deg);
+    transition-duration: 0.7s;
+    transform: skew(180deg,180deg);
     transition-timing-function: ease-out;
 }
 .wrapper-team-img:hover {
@@ -298,16 +298,34 @@ input {
 .logo {
     animation: pulsing 2s infinite;
 }
+.logo-link {
+    animation: color 2s infinite;
+}
 @keyframes pulsing {
     0% {
-        transform: scale(0.5, 0.5);
+        transform:translateX(30px) scale(0.5, 0.5);
+        color: #95e1d3;
     }
     50% {
         transform: scale(1, 1);
+        color: #20bdff;
     }
     100% {
+        color: #5433ff;
         transform: scale(0.5, 0.5);
     }
+}
+@keyframes color {
+    0% {
+        color: #95e1d3;
+    }
+    50% {
+        color: #20bdff;
+    }
+    100% {
+        color: #5433ff;
+    }
+
 }
 
 .footer-button {
