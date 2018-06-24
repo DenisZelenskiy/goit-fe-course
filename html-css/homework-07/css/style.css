@@ -205,23 +205,55 @@
     list-style: none;
 }
 .form-menu-item {
-    margin-bottom: 28px;
-}
-.form-menu-item:last-child {
-    margin-bottom: 0px;
-}
-.wrapper-input {
     margin-bottom: 30px;
 }
-
-/* . {
+.section-contactUs-form {
+    width: 100%;
+    max-width: 940px;
+    min-width: 480px;
+}
+.wrapper-input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.form-menu-item input , textarea {
+    font-family: 'Monserat' , 'Arial Narrow', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: #222222;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 2px;
+}
+.form-menu-item input {
+    width: 455px;
+    height: 50px;
+    padding: 21px;
+    border: 0px;
+    outline: 0px;
+}
+.form-menu-item input:focus , textarea:focus{
+    box-shadow: inset 5px 5px 3px 0px rgba(254,209,54,0.75);
+}
+.section-contactUs-textarea {
+    width: 455px;
+    padding: 21px;
+    height: 210px;
+    resize: none;
+    border: 0px;
+    outline: 0px;
+}
+.form-menu input::placeholder , textarea::placeholder  {
     font-family: 'Monserat' , 'Arial Narrow', sans-serif;
     font-size: 14px;
     line-height: 17px;
     color: #bbbbbb;
     letter-spacing: -0.025em;
     text-transform: uppercase;
-} */
+    font-weight: 700;
+}
 .section-contactUs-button {
     font-family: 'Monserat' , 'Arial Narrow', sans-serif;
     font-size: 18px;
@@ -232,4 +264,8 @@
     background-color: #fed136;
     border: 0px;
     border-radius: 2px;
+    padding: 25px 48px;
+}
+.section-contactUs-button:focus {
+    outline:2px solid #ffffff;
 }
