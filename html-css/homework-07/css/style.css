@@ -1,3 +1,5 @@
+@import url(font-face.css);
+
 * {
     padding: 0;
     margin: 0;
@@ -29,6 +31,11 @@
 }
 .header-logo {
     padding-left: 5px;
+    font-family: 'Great Vibes', sans-serif ;
+    font-size: 26px;
+    line-height: 41px;
+    letter-spacing: 0.05em;
+    color: #fed136;
 }
 .menu-header {
     display: flex;
@@ -39,6 +46,28 @@
     padding: 0;
     margin: 0;
     list-style: none;
+}
+.menu-header-link {
+    font-family: 'Montserrat' ,sans-serif;
+    font-size: 14px;
+    line-height: 41px;
+    color:#222222;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+}
+.menu-header-link::before {
+    content:'';
+    display: block;
+    width: 0px;
+    height: 3px;
+    background-color: #f7dd84;
+}
+.menu-header-link:hover {
+    color: #fed136;
+}
+.menu-header-link:hover::before{
+    width: 100%;
 }
 /* Section-services styling */
 .section-services {
@@ -55,10 +84,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 180px;
+    margin-bottom: 82px;
 }
 .section-services-title {
     margin-bottom: 22px;
+    font-family: 'Monserat' , sans-serif;
+    font-size: 40px;
+    line-height: 75px;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+    color: #222222;
+    text-transform: uppercase
+}
+.section-services-about {
+    font-family: 'Droid Serif' , sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-style: italic;
+    color: #777777;
 }
 .section-services-menu {
     display: flex;
@@ -68,13 +111,55 @@
     margin: 0;
     list-style: none;
 }
+.section-services-item::before {
+    content: '';
+    width: 73px;
+    height: 73px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section-services-item:nth-child(1)::before {
+    background-image: url(../img/Icon_Basket.png);
+
+}
+.section-services-item:nth-child(2)::before {
+    background-image: url(../img/Icon_Laptop.png);
+
+}
+.section-services-item:nth-child(3)::before {
+    background-image: url(../img/Icon_Locked.png);
+}
 .section-services-item {
     flex-basis: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services-item-description {
+    text-align: center;
 }
 .service-item-title {
-    margin-bottom: 22px;
+    font-family: 'Monserat' , sans-serif;
+    font-size: 18px;
+    line-height: 75px;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+    color: #222222;  
+}
+.services-item-description {
+    font-family: 'Roboto Slab' , Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.025em;
+    color: #777777;
 }
 /* Section-contactUs styling */
+.wrapper-background-contactUs{
+    background-image: url(../img/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .section-contactUs {
     display:flex;
     flex-direction: column;
@@ -93,6 +178,20 @@
 }
 .section-contactUs-title {
     margin-bottom: 26px;
+    font-family: 'Monserat' , sans-serif;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase
+}
+.section-contactUs-about {
+    font-family: 'Droid Serif' , sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-style: italic;
+    color: #777777;
 }
 .wrapper-input {
     display: flex;
@@ -104,4 +203,33 @@
     padding: 0;
     margin: 0;
     list-style: none;
+}
+.form-menu-item {
+    margin-bottom: 28px;
+}
+.form-menu-item:last-child {
+    margin-bottom: 0px;
+}
+.wrapper-input {
+    margin-bottom: 30px;
+}
+
+/* . {
+    font-family: 'Monserat' , 'Arial Narrow', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: #bbbbbb;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+} */
+.section-contactUs-button {
+    font-family: 'Monserat' , 'Arial Narrow', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #fed136;
+    border: 0px;
+    border-radius: 2px;
 }
