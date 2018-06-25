@@ -29,13 +29,14 @@
     min-width: 480px;
     margin: 0 auto;
 }
-.header-logo {
+.logo-link {
     padding-left: 5px;
     font-family: 'Great Vibes';
     font-size: 36px;
     line-height: 41px;
     letter-spacing: 0.05em;
     color: #fed136;
+    text-decoration: none;
 }
 .menu-header {
     display: flex;
@@ -234,14 +235,14 @@
 .form-menu input[type='Email']:valid,
 .form-menu input[name='User-name']:valid,
 .section-contactUs-form textarea[name='User-message']:valid {
-    border-bottom: 3px solid green;
-    border-right: 3px solid green;
+    border-bottom: 4px solid rgb(0, 165, 0);
+    border-right: 4px solid rgb(0, 165, 0);
 }
-.form-menu input[name='User-name']:invalid,
-.form-menu input[type='Email']:invalid,
-.section-contactUs-form textarea[name='User-message']:invalid{
-    border-bottom: 3px solid red;
-    border-right: 3px solid red;
+.form-menu input[name='User-name']:focus:invalid,
+.form-menu input[type='Email']:focus:invalid,
+.section-contactUs-form textarea[name='User-message']:focus:invalid{
+    border-bottom: 4px solid rgb(255, 0, 0);
+    border-right: 4px solid rgb(255, 0, 0);;
 }
 .section-contactUs-textarea {
     width: 455px;
@@ -276,4 +277,8 @@
 }
 .section-contactUs-button:focus {
     outline:2px solid #ffffff;
+}
+.section-contactUs-button:hover {
+    transform: scale(1.1);
+    transition-duration: 200ms;
 }
