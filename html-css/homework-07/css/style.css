@@ -31,7 +31,7 @@
 }
 .header-logo {
     padding-left: 5px;
-    font-family: 'Great Vibes', sans-serif ;
+    font-family: '123';
     font-size: 26px;
     line-height: 41px;
     letter-spacing: 0.05em;
@@ -48,7 +48,7 @@
     list-style: none;
 }
 .menu-header-link {
-    font-family: 'Montserrat' ,sans-serif;
+    font-family: 'Montserrat';
     font-size: 14px;
     line-height: 41px;
     color:#222222;
@@ -88,7 +88,7 @@
 }
 .section-services-title {
     margin-bottom: 22px;
-    font-family: 'Monserat' , sans-serif;
+    font-family: 'Montserrat' ;
     font-size: 40px;
     line-height: 75px;
     letter-spacing: -0.025em;
@@ -97,10 +97,9 @@
     text-transform: uppercase
 }
 .section-services-about {
-    font-family: 'Droid Serif' , sans-serif;
+    font-family: 'Droid Serif';
     font-size: 16px;
     line-height: 19px;
-    font-style: italic;
     color: #777777;
 }
 .section-services-menu {
@@ -140,7 +139,7 @@
     text-align: center;
 }
 .service-item-title {
-    font-family: 'Monserat' , sans-serif;
+    font-family: 'Montserrat' ;
     font-size: 18px;
     line-height: 75px;
     letter-spacing: -0.025em;
@@ -148,10 +147,11 @@
     color: #222222;  
 }
 .services-item-description {
-    font-family: 'Roboto Slab' , Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Slab' ;
     font-size: 14px;
     line-height: 17px;
     letter-spacing: -0.025em;
+    font-weight: 400;
     color: #777777;
 }
 /* Section-contactUs styling */
@@ -178,7 +178,7 @@
 }
 .section-contactUs-title {
     margin-bottom: 26px;
-    font-family: 'Monserat' , sans-serif;
+    font-family: 'Montserrat';
     font-size: 40px;
     line-height: 48px;
     letter-spacing: -0.025em;
@@ -187,10 +187,9 @@
     text-transform: uppercase
 }
 .section-contactUs-about {
-    font-family: 'Droid Serif' , sans-serif;
+    font-family: 'Droid Serif';
     font-size: 16px;
     line-height: 19px;
-    font-style: italic;
     color: #777777;
 }
 .wrapper-input {
@@ -218,7 +217,7 @@
     justify-content: space-between;
 }
 .form-menu-item input , textarea {
-    font-family: 'Monserat' , 'Arial Narrow', sans-serif;
+    font-family: 'Montserrat' ;
     font-size: 14px;
     line-height: 17px;
     color: #222222;
@@ -246,7 +245,7 @@
     outline: 0px;
 }
 .form-menu input::placeholder , textarea::placeholder  {
-    font-family: 'Monserat' , 'Arial Narrow', sans-serif;
+    font-family: 'Montserrat' ;
     font-size: 14px;
     line-height: 17px;
     color: #bbbbbb;
@@ -255,7 +254,7 @@
     font-weight: 700;
 }
 .section-contactUs-button {
-    font-family: 'Monserat' , 'Arial Narrow', sans-serif;
+    font-family: 'Montserrat' ;
     font-size: 18px;
     line-height: 22px;
     color: #ffffff;
