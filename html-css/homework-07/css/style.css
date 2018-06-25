@@ -31,7 +31,7 @@
 }
 .header-logo {
     padding-left: 5px;
-    font-family: '123';
+    font-family: 'Great Vibes';
     font-size: 26px;
     line-height: 41px;
     letter-spacing: 0.05em;
@@ -192,10 +192,6 @@
     line-height: 19px;
     color: #777777;
 }
-.wrapper-input {
-    display: flex;
-    justify-content: space-between;
-}
 .form-menu {
     display: flex;
     flex-direction: column;
@@ -222,7 +218,6 @@
     line-height: 17px;
     color: #222222;
     letter-spacing: -0.025em;
-    text-transform: uppercase;
     font-weight: 700;
     border-radius: 2px;
 }
@@ -234,7 +229,19 @@
     outline: 0px;
 }
 .form-menu-item input:focus , textarea:focus{
-    box-shadow: inset 5px 5px 3px 0px rgba(254,209,54,0.75);
+    box-shadow: inset 5px 5px 0px 0px rgba(254,209,54,0.75);
+}
+.form-menu input[type='Email']:valid,
+.form-menu input[name='User-name']:valid,
+.section-contactUs-form textarea[name='User-message']:valid {
+    border-bottom: 3px solid green;
+    border-right: 3px solid green;
+}
+.form-menu input[name='User-name']:invalid,
+.form-menu input[type='Email']:invalid,
+.section-contactUs-form textarea[name='User-message']:invalid{
+    border-bottom: 3px solid red;
+    border-right: 3px solid red;
 }
 .section-contactUs-textarea {
     width: 455px;
@@ -264,6 +271,8 @@
     border: 0px;
     border-radius: 2px;
     padding: 25px 48px;
+    margin: 0 auto;
+    display: block;
 }
 .section-contactUs-button:focus {
     outline:2px solid #ffffff;
