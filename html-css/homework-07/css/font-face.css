@@ -4,8 +4,8 @@
     font-style: normal;
     font-weight: 400;
     src: local('Montserrat Regular'), local('Montserrat-Regular'),
-         url('../fonts/montserrat-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/montserrat-v12-latin-regular.woff') format('woff'); /* Modern Browsers */
+         url('../fonts/Montserrat/montserrat-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/Montserrat/montserrat-v12-latin-regular.woff') format('woff'); /* Modern Browsers */
   }
   /* montserrat-700 - latin */
   @font-face {
@@ -13,8 +13,8 @@
     font-style: normal;
     font-weight: 700;
     src: local('Montserrat Bold'), local('Montserrat-Bold'), 
-         url('../fonts/montserrat-v12-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/montserrat-v12-latin-700.woff') format('woff'); /* Modern Browsers */
+         url('../fonts/Montserrat/montserrat-v12-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/Montserrat/montserrat-v12-latin-700.woff') format('woff'); /* Modern Browsers */
        
   }
   /* great-vibes-regular - latin */
@@ -23,22 +23,29 @@
     font-style: normal;
     font-weight: 400;
     src: local('Great Vibes'), local('GreatVibes-Regular'),
-         url('../fonts/great-vibes-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/great-vibes-v5-latin-regular.woff') format('woff'); /* Modern Browsers */
+         url('../fonts/Great Vibes/great-vibes-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/Great Vibes/great-vibes-v5-latin-regular.woff') format('woff'); /* Modern Browsers */
   }
 
   @font-face {
       font-family: 'Roboto Slab';
       font-style: normal;
       font-weight: 400;
-      src: url('../fonts/roboto-slab-v7-latin-regular.woff') format('woff'),
-           url('../fonts/roboto-slab-v7-latin-regular.woff2') format('woff2');
+      src: url('../fonts/Roboto Slab/roboto-slab-v7-latin-regular.woff') format('woff'),
+           url('../fonts/Roboto Slab/roboto-slab-v7-latin-regular.woff2') format('woff2');
   }
   @font-face {
     font-family: 'Droid Serif';
-    src: url('../fonts/droidserif-italic-webfont.woff2') format('woff2'),
-         url('../fonts/droidserif-italic-webfont.woff') format('woff');
+    src: url('../fonts/Droid Serif/droidserif-italic-webfont.woff2') format('woff2'),
+         url('../fonts/Droid Serif/droidserif-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
+}
+@font-face {
+    font-family: 'Wisdom Script';
+    src: url('../fonts/Wisdom Script/wisdomscriptaj-webfont.woff2') format('woff2'),
+         url('../fonts/wisdom script/WisdomScriptAJ.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;    
 }
