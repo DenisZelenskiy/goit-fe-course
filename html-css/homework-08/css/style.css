@@ -1,0 +1,141 @@
+@import url(font-face.css);
+@import url(media.css);
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat';
+    line-height: 1.2;
+    font-weight: 700;
+}
+.container {
+    width: 320px;
+}
+/* BACKGROUND-IMG */
+.wrapper-background {
+    background-image: url(../img/Background\ 320.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Header styling */
+.page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-link{
+    font-family: inherit;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.header-logo {
+    font-family: inherit;
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.login {
+    margin-right: 20px;
+}
+.signup {
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+.header-links {
+    margin-bottom: 130px;
+}
+.page-header {
+    padding: 30px 0px;
+}
+/* SECTION-ABOUT styling */
+.section-about {
+    padding: 10px 10px;
+    color: #ffffff;
+}
+.section-about-title {
+    font-size: 30px;
+    padding-bottom: 21px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.section-about-description {
+    font-size: 18px;
+    font-family: "Roboto";
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section-about-button {
+    font-family: inherit;
+    background-color: #ff4e50;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 15px 0;
+    display: block;
+    width: 280px;
+    margin-bottom: 130px;
+    border-radius: 40px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+}
+/* SECTION-PARTNER styling */
+.section-partner {
+    padding:70px 0 57px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-partner {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.section-partner-title {
+    font-size: 22px;
+    color: #333333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.menu-partner-item {
+    text-align: center;
+    width: 221px;
+}
+.menu-partner-item img{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.item-name {
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+.item-description {
+    color: #666666;
+    font-size: 14px;
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+.section-partner-button {
+    color:#ff4e50;
+    font-size: 14px;
+    font-family: inherit;
+    padding: 13px 0;
+    display: inline-block;
+    width: 280px;
+    background-color: #ffffff;
+    border-radius: 40px;
+    border:2px solid #ff4e50;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 700;
+    outline: none;
+}
