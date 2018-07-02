@@ -96,9 +96,6 @@ body {
   margin: 0px;
   display: flex;
   flex-direction: column;
-}
-.box-fixed {
-  width: 100%;
   margin-bottom: 40px;
 }
 .section-partner-title {
@@ -211,7 +208,8 @@ body {
   outline: none;
 }
 .menu-partner-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 14px 28px rgba(15, 165, 145, 0.25), 0 10px 10px rgba(15, 165, 145, 0.25) , 14px 0px 20px rgba(15, 165, 145, 0.25) ;
-    transition: transform 0.2s ease-in, box-shadow 0.3s linear;
+  transform: scale(1.05);
+  box-shadow: 0 14px 28px rgba(15, 165, 145, 0.25),
+    0 10px 10px rgba(15, 165, 145, 0.25), 14px 0px 20px rgba(15, 165, 145, 0.25);
+  transition: transform 0.2s ease-in, box-shadow 0.3s linear;
 }
