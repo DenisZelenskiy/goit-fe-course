@@ -225,7 +225,8 @@
 .form-menu-item input {
     width: 455px;
     height: 50px;
-    padding: 21px;
+    padding-left: 21px;
+    padding-right: 21px;
     border: 0px;
     outline: 0px;
 }
