@@ -1,0 +1,22 @@
+:root {
+    --font-base: "Montserrat" , sans-serif;
+    --font-second: "Roboto" , sans-serif;
+
+    --font-size-text-small: 14px;
+    --font-size-text-medium: 20px;
+    --font-size-title-medium: 22px;
+    --font-size-title-large: 30px;
+    --font-size-title-large2: 52px;
+    --font-size-text-medium1: 18px;
+    --font-size-text-medium2: 24px;
+    
+    --color-text-base: #ffffff;
+    --color-text-light: #666666;
+    --color-text-dark: #333333;
+    --color-alt-light: #ffffff;
+    --color-alt-base: #ff4e50;
+    --color-alt-marker: #ff4e50;
+    --color-alt-marker2: #1cd7ad;
+    --color-alt-marker3: #ffa507;
+    --color-alt-marker4: #4e73db;
+}
