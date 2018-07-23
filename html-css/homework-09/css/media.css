@@ -2,7 +2,7 @@
   .header-links {
     margin-bottom: 130px;
   }
-  .section-about-description {
+  .header-about-description {
     width: 220px;
     margin-bottom: 20px;
     margin-left: auto;
@@ -11,7 +11,7 @@
   .menu-partner-item {
     margin-bottom: 30px;
   }
-  .section-about-button {
+  .header-about-button {
     margin-left: auto;
     margin-right: auto;
   }
@@ -31,21 +31,21 @@
     width: 748px;
   }
   /* PAGE-HEADER stling */
-  .page-header {
+  /* .page-header {
     flex-direction: row-reverse;
     justify-content: space-between;
-  }
+  } */
   /* SECTION-ABOUT styling */
   .section-about {
     padding: 110px 0px 235px;
     width: 530px;
     margin: 0 auto;
   }
-  .section-about-title {
+  .header-about-title {
     font-size: var(--font-size-title-large2);
     margin-bottom: 46px;
   }
-  .section-about-description {
+  .header-about-description {
     font-size: var(--font-size-text-medium2);
     margin-bottom: 40px;
   }
@@ -72,9 +72,9 @@
   .menu-partner-item:not(:nth-last-child(-n + 2)) {
     margin-bottom: 61px;
   }
-  .page-header {
+  /* .page-header {
     padding: 50px 36px;
-  }
+  } */
 }
 @media (min-width: 962px) {
   .container {
@@ -87,7 +87,7 @@
     width: 942px;
     margin: 0 auto;
   }
-  .section-about {
+  .header-about {
     width: 503px;
   }
   .section-partner {
