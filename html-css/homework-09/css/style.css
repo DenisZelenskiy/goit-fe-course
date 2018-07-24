@@ -1,6 +1,10 @@
 @import url(font-face.css);
 @import url(variables.css);
 
+.padding-top-header {
+  padding-top: 2rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,23 +15,15 @@ body {
   line-height: 1.2;
   font-weight: 700;
 }
-.container {
-  width: 320px;
-  margin: 0 auto;
-}
+
 /* BACKGROUND-IMG */
-.wrapper-background {
+.wrapper {
   background-image: url(../img/Background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 /* Header styling */
-/* .page-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
 .header-link {
   font-family: inherit;
   font-size: var(--font-size-text-small);
@@ -44,30 +40,38 @@ body {
 .signup {
   border: 2px solid var(--color-alt-light);
   border-radius: 30px;
-  padding: 10px 15px;
+  padding: 0.625rem 0.9375rem;
 }
 .login {
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
-.page-header {
-  padding: 30px 0px;
+.header-links {
+  text-align: center;
 }
-/* SECTION-ABOUT styling */
+.header-logoWRP {
+  text-align: center;
+}
+/* HEADER-ABOUT styling */
 .header-about {
-  padding: 10px 10px 130px;
   color: var(--color-text-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .header-about-title {
   font-size: var(--font-size-title-large);
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  width: 300px;
   text-transform: uppercase;
   text-align: center;
 }
 .header-about-description {
   font-size: var(--font-size-text-medium1);
   font-family: var(--font-second);
+  width: 220px;
   font-weight: 300;
   text-align: center;
+  margin-bottom: 1.25rem;
 }
 .header-about-button {
   font-family: inherit;
@@ -83,6 +87,7 @@ body {
   outline: none;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 8.75rem;
 }
 /* SECTION-PARTNER styling */
 .section-partner {
@@ -222,6 +227,86 @@ body {
     0 10px 10px rgba(15, 165, 145, 0.25), 14px 0px 20px rgba(15, 165, 145, 0.25);
   transition: transform 0.2s ease-in, box-shadow 0.3s linear;
 }
-@import url(media.css);
-@import url(bootstrap-grid.css);
+
+/* MEDIA */
+@media (max-width: 767px) {
+  .header-links {
+    margin-bottom: 8.125rem;
+  }
+  .mb-header-linksLogo {
+    margin-bottom: 1.875rem;
+  }
+   .item-order-one {
+    order: -2;
+  }
+  .item-order-two {
+    order: -1;
+  }
+}
+@media screen and (max-width: 991px) {
+  
+}
+@media screen and (min-width: 992px) {
+  .header-links {
+    text-align: right;
+  }
+  .header-logoWRP {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mb-header-linksLogo {
+    margin-bottom: 10rem;
+  }
+  .header-about-title {
+    width: 510px;
+  }
+  .header-about-description {
+    width: 400px;
+  }
+  .header-about-title {
+    font-size: var(--font-size-title-large2);
+    margin-bottom: 2.875rem;
+  }
+  .header-about-description {
+    font-size: var(--font-size-text-medium2);
+    margin-bottom: 2.5rem;
+  }
+  .header-about-button {
+    margin-bottom: 14.6875rem;
+  }
+  .section-partner {
+    padding: 75px 0 40px;
+    width: 492px;
+    margin: 0 auto;
+  }
+  .section-partner-title {
+    margin-bottom: 38px;
+  }
+  .menu-partner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .menu-partner-item {
+    flex: 0 0 221px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 961px) {
+  .menu-partner-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 61px;
+  }
+  /* .page-header {
+    padding: 50px 36px;
+  } */
+
+
+  .menu-partner-item:not(:nth-child(-n + 4)) {
+    margin-top: 22px;
+  }
+
+
+
 
