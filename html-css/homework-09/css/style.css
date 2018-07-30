@@ -262,16 +262,6 @@ img {
   }
 }
 
-@media screen and (min-width: 992px) {
-  .header-links {
-    text-align: right;
-  }
-  .header-logoWRP {
-    text-align: left;
-  }
-
-}
-
 @media screen and (min-width: 768px) {
   .mb-header-linksLogo {
     margin-bottom: 10rem;
@@ -305,11 +295,27 @@ img {
   .header-about-button {
     margin-bottom: 14.6875rem;
   }
+  .offset-md-right-2 {
+    margin-right: 16.66667%;
+  }
  
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .menu-partner [class*="col-"]:not(:nth-last-child(-n + 2)) {
     margin-bottom: 3.75rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+    .header-links {
+      text-align: right;
+    }
+    .header-logoWRP {
+      text-align: left;
+    }
+    .offset-lg-right-0 {
+      margin-right: 0;
+    }  
   }
 
 
