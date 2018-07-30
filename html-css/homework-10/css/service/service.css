@@ -1,0 +1,77 @@
+.mb-service__section-title {
+    margin-bottom: 7rem;
+}
+.mb-service {
+    margin-bottom: 3.4375rem;
+}
+.service {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.service__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+.service__item {
+    -ms-flex-preferred-size: 31.91%;
+        flex-basis: 31.91%;
+    position: relative;
+}
+.service__title {
+    font-family: var(--font-base);
+    color: var(--color-text-dark);
+    font-size: var(--font-size-small);
+    font-weight: bold;
+    margin-bottom: 1.375rem;
+    text-transform: uppercase;
+}
+.service__desc {
+    font-family: var(--font-second);
+    font-size: var(--font-size-small2);
+    color: var(--colot-text-light);
+    line-height: 24px;
+    min-height: 81px;
+}
+.service__itemWRP {
+    width: 300px;
+    margin-left: auto;
+
+}
+.service__item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 3.75rem;
+}
+.service__icon::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 25px;
+}
+.service__icon--alarm::before {
+    background-image: url(../../img/icons/ALARM.svg);
+}
+.service__icon--graph::before {
+    background-image: url(../../img/icons/LINE\ GRAPH.svg);
+}
+.service__icon--computer::before {
+    background-image: url(../../img/icons/COMPUTER\ _\ OK.svg);
+}
+.service__icon--book::before {
+    background-image: url(../../img/icons/BOOK\ 2.svg);
+}
+.service__icon--home::before {
+    background-image: url(../../img/icons/HOME.svg);
+}
+.service__icon--image::before {
+    background-image: url(../../img/icons/IMAGE.svg);
+}

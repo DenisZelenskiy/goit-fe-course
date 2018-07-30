@@ -1,5 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('variables.css');
+@import url('common.css');
+@import url('font-face.css');
+@import url('visually-hidden.css');
+@import url('header/logo.css');
+@import url('header/navigation.css');
+@import url('header/header.css');
+@import url('header/greeting.css');
+@import url('section-title/section-title.css');
+@import url('service/service.css');
+@import url('team/team.css');
+@import url('footer/footer.css');
+@import url('subscribe/subscribe.css');
+@import url('social/social.css');
+@import url();
+@import url();

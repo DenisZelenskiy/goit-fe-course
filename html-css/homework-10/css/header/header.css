@@ -1,0 +1,25 @@
+.header {
+    padding-top: 1.875rem;
+    padding-bottom: 14.375rem;
+    min-height: 1000px;
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 2.8125rem;
+}
+.header-wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient( to top, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%),
+    url('../../img/background.jpg');
+}
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .header-wrapper {
+        background-image: linear-gradient( to top, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%),
+        url('../../img/background@2x.jpg');
+}
+@media (min-resolution: 288dpi), (min-resolution: 3dppx) {
+    .header-wrapper {
+        background-image: linear-gradient( to top, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%),
+        url('../../img/background@3x.jpg');
+}

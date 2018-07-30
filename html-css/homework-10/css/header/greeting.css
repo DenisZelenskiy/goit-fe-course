@@ -1,0 +1,29 @@
+.greeting__about {
+  font-family: var(--font-second-decor);
+  font-size: var(--font-size-large);
+  text-align: center;
+  color: var(--color-text-base);
+  margin-bottom: 2.8125rem;
+}
+.greeting__title {
+  font-family: var(--font-base);
+  font-size: var(--font-size-large2);
+  font-weight: bold;
+  color: var(--color-text-base);
+  width: 820px;
+  margin: 0 auto;
+  margin-bottom: 6.875rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.btn-greeting {
+  font-family: var(--font-base);
+  color: var(--color-text-base);
+  font-size: var(--font-size-small);
+  padding: 12px 30px;
+  background-color: transparent;
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-weight: bold;
+  border: 4px solid #fff;
+}

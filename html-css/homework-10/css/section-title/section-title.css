@@ -1,0 +1,26 @@
+.section-about {
+    font-family: var(--font-second-decor);
+    font-size: var(--font-size-medium);
+    color: var(--color-text-dark);
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.section-title {
+    font-family: var(--font-base);
+    font-size: var(--font-size-medium2);
+    color: var(--color-text-dark);
+    line-height: 1.2;
+    text-align: center; 
+    text-transform: uppercase;
+}
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-alt-marker);
+    display: block;
+    margin-top: 2.6875rem;
+    margin-left: auto;
+    margin-right: auto;
+}
