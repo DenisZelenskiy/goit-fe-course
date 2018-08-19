@@ -1,6 +1,7 @@
 @import url('variables.css');
 @import url('common.css');
 @import url('font-face.css');
+@import url('normalize.css');
 @import url('visually-hidden.css');
 @import url('header/logo.css');
 @import url('header/navigation.css');
