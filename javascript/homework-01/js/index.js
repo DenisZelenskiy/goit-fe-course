@@ -40,30 +40,29 @@ if (isValidValue) {
     if (userChoise) {
       alert(`Приятного путешествия в группе ${taba}`);
     } else {
-      alert('Нам очень жаль, приходите еще!');
+      alert("Нам очень жаль, приходите еще!");
     }
-  } else if (placesSharm >= isNumber) {
-    const userChoise = confirm(
-      `Есть место в группе ${sharm} , вы согласны быть в этой группе? `
-    );
-    if (userChoise) {
-      alert(`Приятного путешествия в группе ${sharm}`);
-    } else {
-      alert('Нам очень жаль, приходите еще!');
-    }
-  } else if (placesHurgada >= isNumber) {
+  } else if (placesHurgada >= isNumber && isNumber > placesSharm) {
     const userChoise = confirm(
       `Есть место в группе ${hurgada} , вы согласны быть в этой группе? `
     );
     if (userChoise) {
       alert(`Приятного путешествия в группе ${hurgada}`);
     } else {
-      alert('Нам очень жаль, приходите еще!');
+      alert("Нам очень жаль, приходите еще!");
+    }
+  } else if (placesSharm >= isNumber && isNumber > placesTaba) {
+    const userChoise = confirm(
+      `Есть место в группе ${sharm} , вы согласны быть в этой группе? `
+    );
+    if (userChoise) {
+      alert(`Приятного путешествия в группе ${sharm}`);
+    } else {
+      alert("Нам очень жаль, приходите еще!");
     }
   } else {
-    alert('Извините, столько мест нет ни в одной группе!');
+    alert("Извините, столько мест нет ни в одной группе!");
   }
 } else {
   alert("Ошибка ввода");
 }
-
