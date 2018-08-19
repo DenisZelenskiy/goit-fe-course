@@ -1,0 +1,8 @@
+.logo {
+  @extend %link;
+  font-family: $font-base;
+  font-size: $font-size-medium2;
+  color: $color-text-base;
+  line-height: 1.2;
+  font-weight: 700;
+}

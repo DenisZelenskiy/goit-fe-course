@@ -1,0 +1,32 @@
+.greeting__about {
+  font-family: $font-second-decor;
+  font-size: $font-size-large;
+  text-align: center;
+  color: $color-text-base;
+  margin-bottom: 2.8125rem;
+}
+
+.greeting__title {
+  font-family: $font-base;
+  font-size: $font-size-large2;
+  font-weight: bold;
+  color: $color-text-base;
+  width: 820px;
+  margin: 0 auto;
+  margin-bottom: 6.875rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btn-greeting {
+  @extend %btn;
+  font-family: $font-base;
+  color: $color-text-base;
+  font-size: $font-size-small;
+  padding: 12px 30px;
+  background-color: transparent;
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-weight: bold;
+  border: 4px solid $color-alt-marker4;
+}

@@ -1,0 +1,67 @@
+.navigation__container {
+  margin-bottom: 11.875rem;
+  @include center-flex("all");
+}
+
+.navigation__list {
+  @extend %list;
+  @include center-flex("hor");
+  width: 625px;
+}
+
+.navigation__link {
+  @extend %link;
+  font-family: $font-base;
+  line-height: 1.2;
+  color: $color-text-base;
+  font-size: $font-size-small;
+  text-transform: uppercase;
+
+  &::after {
+    @include pseudo;
+    width: 0px;
+    height: 3px;
+    background-color: $color-alt-marker2;
+    margin-top: 0.75rem;
+  }
+
+  &--active:hover,
+  --active:focus {
+    color: $color-alt-marker2;
+  }
+
+  &--active:hover::after,
+  --active:focus::after {
+    width: 100%;
+  }
+}
+
+/* control */
+.control__btn {
+  @extend %btn;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.control {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.control__icon {
+  fill: $color-alt-marker4;
+
+  &--shoping {
+    width: 18px;
+    height: 15px;
+  }
+
+  &--magnifying {
+    width: 18px;
+    height: 18px;
+  }
+}

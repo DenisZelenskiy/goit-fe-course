@@ -1,0 +1,19 @@
+.footer {
+  width: 1200px;
+  margin: 0 auto;
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $color-alt-marker5;
+
+  &__autor {
+    font-family: $font-base;
+    color: $color-text-dark;
+    font-size: $font-size-small;
+
+    &--decor {
+      color: $color-alt-marker;
+    }
+  }
+}

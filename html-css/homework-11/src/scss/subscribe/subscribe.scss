@@ -1,0 +1,26 @@
+.subscribe-WRP {
+  display: flex;
+}
+
+.subscribe__field {
+  font-family: $font-second;
+  font-size: $font-size-small2;
+  color: $color-text-slightly;
+  font-weight: 300;
+  font-style: italic;
+  padding: 14px 12px;
+  width: 228px;
+  height: 40px;
+}
+
+.subscribe__btn {
+  @extend %btn;
+  height: 40px;
+  width: 151px;
+  font-size: $font-size-small;
+  font-family: $font-base;
+  color: $color-text-base;
+  font-weight: bold;
+  background-color: $color-alt-marker3;
+  text-transform: uppercase;
+}

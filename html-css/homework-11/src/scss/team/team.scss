@@ -1,0 +1,83 @@
+.mb-team__section-title {
+  margin-bottom: 5.9375rem;
+}
+
+.mb-team {
+  margin-bottom: 5.375rem;
+}
+
+.team {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__description {
+    font-family: $font-second;
+    font-size: $font-size-small2;
+    color: $color-text-light;
+    line-height: 24px;
+    margin-bottom: 5.9375rem;
+    text-align: center;
+  }
+
+  &__list {
+    @extend %list;
+    @include center-flex("hor");
+  }
+}
+
+.team__item {
+  width: 380px;
+
+  &-imgBACKGRD {
+    background-color: $color-alt-marker3;
+  }
+
+  &-imgWRP {
+    position: relative;
+    margin-bottom: 2.625rem;
+    background-image: linear-gradient(
+      to top,
+      rgba(252, 227, 138, 0.9) 0%,
+      rgba(243, 129, 129, 0.9) 100%
+    );
+  }
+
+  &-name {
+    font-family: $font-base;
+    font-size: $font-size-small;
+    color: $color-text-dark;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+  }
+
+  &-occupation {
+    font-family: $font-second;
+    font-size: $font-size-small2;
+    color: $color-text-light;
+    line-height: 24px;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+  }
+
+  &-imgWRP--active:hover .social,
+  &-imgWRP--active:focus .social {
+    opacity: 1;
+    transition: opacity 300ms linear;
+  }
+
+  &-imgWRP--active:hover,
+  &-imgWRP--active:focus {
+    transform: translate(-10px, -10px);
+    transition: transform 300ms ease;
+  }
+
+  &-imgWRP--active:hover .team__item-img,
+  &-imgWRP--active:focus .team__item-img {
+    opacity: 0.2;
+    transition-duration: 300ms;
+  }
+}
