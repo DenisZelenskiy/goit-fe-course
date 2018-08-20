@@ -588,7 +588,7 @@ input[type="radio"].visually-hidden {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url("../../img/background.jpg");
+  background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url("../img/background.jpg");
 }
 
 .greeting__about {
@@ -716,27 +716,27 @@ input[type="radio"].visually-hidden {
 }
 
 .service__icon--alarm::before {
-  background-image: url(../../img/icons/ALARM.svg);
+  background-image: url(../img/icons/ALARM.svg);
 }
 
 .service__icon--graph::before {
-  background-image: url(../../img/icons/LINEG.svg);
+  background-image: url(../img/icons/LINEG.svg);
 }
 
 .service__icon--computer::before {
-  background-image: url(../../img/icons/COMPUTER.svg);
+  background-image: url(../img/icons/COMPUTER.svg);
 }
 
 .service__icon--book::before {
-  background-image: url(../../img/icons/BOOK.svg);
+  background-image: url(../img/icons/BOOK.svg);
 }
 
 .service__icon--home::before {
-  background-image: url(../../img/icons/HOME.svg);
+  background-image: url(../img/icons/HOME.svg);
 }
 
 .service__icon--image::before {
-  background-image: url(../../img/icons/IMAGE.svg);
+  background-image: url(../img/icons/IMAGE.svg);
 }
 
 .mb-team__section-title {
@@ -932,12 +932,12 @@ input[type="radio"].visually-hidden {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .header-wrapper {
-    background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url("../../img/background@2x.jpg");
+    background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url("../img/background@2x.jpg");
   }
 }
 
 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
   .header-wrapper {
-    background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url("../../img/background@3x.jpg");
+    background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%), url("../img/background@3x.jpg");
   }
 }

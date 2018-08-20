@@ -14,14 +14,14 @@
       rgba(252, 227, 138, 0.9) 0%,
       rgba(243, 129, 129, 0.9) 100%
     ),
-    url("../../img/background.jpg");
+    url("../img/background.jpg");
   @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: linear-gradient(
         to top,
         rgba(252, 227, 138, 0.9) 0%,
         rgba(243, 129, 129, 0.9) 100%
       ),
-      url("../../img/background@2x.jpg");
+      url("../img/background@2x.jpg");
   }
   @media (min-resolution: 288dpi), (min-resolution: 3dppx) {
     background-image: linear-gradient(
@@ -29,6 +29,6 @@
         rgba(252, 227, 138, 0.9) 0%,
         rgba(243, 129, 129, 0.9) 100%
       ),
-      url("../../img/background@3x.jpg");
+      url("../img/background@3x.jpg");
   }
 }
