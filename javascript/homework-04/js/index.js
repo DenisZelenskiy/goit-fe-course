@@ -19,8 +19,9 @@ function Cashier({ name, productDatabase }) {
   };
   this.countTotalPrice = function(order) {
     for (const key in order) {
-      if (productDatabase.hasOwnProperty(key))
-      this.totalPrice += productDatabase[key] * order[key];
+      if (this.productDatabase.hasOwnProperty(key)) {
+        this.totalPrice += productDatabase[key] * order[key];
+      }
     }
     return this.totalPrice;
   };
@@ -57,15 +58,17 @@ console.log(mango.productDatabase);
 console.log(mango.customerMoney);
 
 const totalPrice = mango.countTotalPrice({
-  bread: 2,
-  milk: 2,
+  bread: 22,
+  milk: 22,
   apples: 1,
-  cheese: 1
+  cheese: 1,
+  becon: 100,
+  pepsi: 2,
 });
 
 console.log(totalPrice);
 
-mango.getCustomerMoney(300);
+mango.getCustomerMoney(7300);
 
 console.log(mango.customerMoney);
 
