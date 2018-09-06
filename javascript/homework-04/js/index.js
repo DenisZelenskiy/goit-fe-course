@@ -19,6 +19,7 @@ function Cashier({ name, productDatabase }) {
   };
   this.countTotalPrice = function(order) {
     for (const key in order) {
+      if (productDatabase.hasOwnProperty(key))
       this.totalPrice += productDatabase[key] * order[key];
     }
     return this.totalPrice;
@@ -78,6 +79,6 @@ if (change !== null) {
   mango.onError();
 }
 
-mango.reset(); 
+mango.reset();
 
 console.log(mango.customerMoney);
