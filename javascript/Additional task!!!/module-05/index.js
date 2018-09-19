@@ -181,3 +181,4 @@
 // console.log(allGuestsActive(guestsA)); // false
 
 // console.log(allGuestsActive(guestsB)); // true
+
