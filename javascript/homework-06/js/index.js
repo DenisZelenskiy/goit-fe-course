@@ -18,26 +18,20 @@ class Hamburger {
   get calculatePrice() {
     const sizePrice = Hamburger.SIZES[this._size].price;
     const stufingPrice = Hamburger.STUFFINGS[this._stuffing].price;
-    const toppingPrice =
-      this._toppings.length > 0
-        ? this._toppings.reduce(function(acc, elem) {
-            acc += Hamburger.TOPPINGS[elem].price;
-            return acc;
-          }, 0)
-        : 0;
+    const toppingPrice = this._toppings.reduce(function(acc, elem) {
+      acc += Hamburger.TOPPINGS[elem].price;
+      return acc;
+    }, 0);
     const sumPrice = sizePrice + stufingPrice + toppingPrice;
     return sumPrice;
   }
   get calculateCalories() {
     const sizeCalories = Hamburger.SIZES[this._size].calories;
     const stuffingCalories = Hamburger.STUFFINGS[this._stuffing].calories;
-    const toppingCalories =
-      this._toppings.length > 0
-        ? this._toppings.reduce(function(acc, elem) {
-            acc += Hamburger.TOPPINGS[elem].calories;
-            return acc;
-          }, 0)
-        : 0;
+    const toppingCalories = this._toppings.reduce(function(acc, elem) {
+      acc += Hamburger.TOPPINGS[elem].calories;
+      return acc;
+    }, 0);
     const sumCalories = sizeCalories + stuffingCalories + toppingCalories;
     return sumCalories;
   }
@@ -47,11 +41,9 @@ Hamburger.prototype.addTopping = function(topping) {
     this._toppings.push(topping);
   }
 };
+
 Hamburger.prototype.removeTopping = function(topping) {
-  if (this._toppings.includes(topping)) {
-    let index = this._toppings.indexOf(topping);
-    this._toppings.splice(index, 1);
-  }
+  this._toppings = this._toppings.filter(elem => !(elem === topping));
 };
 
 Hamburger.SIZE_SMALL = "SIZE_SMALL";
@@ -102,15 +94,12 @@ const hamburger = new Hamburger(
   Hamburger.STUFFING_CHEESE
 );
 hamburger.addTopping(Hamburger.TOPPING_SPICE);
-
+hamburger.addTopping(Hamburger.TOPPING_SAUCE);
 console.log("Calories: ", hamburger.calculateCalories);
 console.log("Price: ", hamburger.calculatePrice);
 hamburger.addTopping(Hamburger.TOPPING_SAUCE);
-
+console.log(hamburger._toppings);
 console.log("Price with sauce: ", hamburger.calculatePrice);
-console.log(
-  "Is hamburger large: ",
-  hamburger.size === Hamburger.SIZE_LARGE
-);
+console.log("Is hamburger large: ", hamburger.size === Hamburger.SIZE_LARGE);
 hamburger.removeTopping(Hamburger.TOPPING_SPICE);
 console.log("Hamburget has %d toppings", hamburger.toppings.length);
