@@ -61,31 +61,31 @@
 
 //--------TASK 6;
 
-// const createPostCard = () => {
-//     const post = document.createElement('div');
-//     post.classList.add("post");
-//     const postImage = document.createElement('img');
-//     postImage.classList.add('post__image');
-//     postImage.setAttribute('src', 'http://via.placeholder.com/400x150');
-//     postImage.setAttribute('alt', 'post image');
-//     const postTitle = document.createElement('h2');
-//     postTitle.classList.add('post__title');
-//     postTitle.textContent = "Lorem ipsum dolor";
-//     const postText = document.createElement('p');
-//     postText.classList.add("post__text");
-//     postText.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos eatemporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamusconsequuntur, qui modi nesciunt veritatis distinctio rem!";
-//     const button = document.createElement('a');
-//     button.classList.add('button');
-//     button.setAttribute('href', '#');
-//     button.textContent = 'Read more';
-//     post.append(postImage,postTitle,postText,button);
-//     return post;
+// const createPostCard = post => {
+//   const poster = document.createElement("div");
+//   poster.classList.add("post");
+//   const postImage = document.createElement("img");
+//   postImage.classList.add("post__image");
+//   postImage.setAttribute("src", post.img);
+//   postImage.setAttribute("alt", "post image");
+//   const postTitle = document.createElement("h2");
+//   postTitle.classList.add("post__title");
+//   postTitle.textContent = post.title;
+//   const postText = document.createElement("p");
+//   postText.classList.add("post__text");
+//   postText.textContent = post.text;
+//   const button = document.createElement("a");
+//   button.classList.add("button");
+//   button.setAttribute("href", post.link);
+//   button.textContent = "Read more";
+//   poster.append(postImage, postTitle, postText, button);
+//   return poster;
 // };
-// document.querySelector('.post').after(createPostCard());
-// document.querySelector('.post').after(createPostCard());
-// document.querySelector('.post').after(createPostCard());
-// document.querySelector('.post').after(createPostCard());
-// document.querySelector('.post').after(createPostCard());
+// document.querySelector(".post").after(createPostCard(post));
+// document.querySelector(".post").after(createPostCard(post));
+// document.querySelector(".post").after(createPostCard(post));
+// document.querySelector(".post").after(createPostCard(post));
+// document.querySelector(".post").after(createPostCard(post));
 
 //---------TASK 7;
 
@@ -105,6 +105,3 @@
 //     return container;
 // };
 // root.append(createBoxes(99999));
-
-
-
