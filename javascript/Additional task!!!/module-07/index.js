@@ -12,6 +12,13 @@
 // }
 
 // diplayText(item);
+// const items = document.querySelectorAll('.categories > li');
+
+// items.forEach(item => {
+//     console.log('Категория' , item.firstChild);
+//     console.log('Количество вложенных li: ',item.firstElementChild.children.length);
+
+// })
 
 //----------TASK 2;
 
@@ -59,6 +66,20 @@
 // const getInputData = (inputs) => inputs.map(elem => elem.getAttribute("value"));
 // console.log(getInputData(inputValid));
 
+// const sizeFilterChecked = [...document.querySelectorAll("input[checked]")];
+// const getCheckedInputsData = inputs => {
+//   const dataSet = inputs[0].dataset.prop;
+//   const arrValue = [];
+//   inputs.forEach(element => {
+//     arrValue.push(element.value);
+//   });
+//   return {
+//     value: arrValue,
+//     prop: dataSet
+//   };
+// };
+// console.log(getCheckedInputsData(sizeFilterChecked));
+
 //--------TASK 6;
 
 // const createPostCard = post => {
@@ -104,4 +125,6 @@
 //     container.append(...list);
 //     return container;
 // };
-// root.append(createBoxes(99999));
+// root.append(createBoxes(111111));
+
+document.createElement(elem);
