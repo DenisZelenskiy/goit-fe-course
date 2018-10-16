@@ -25,6 +25,6 @@ li:not(:nth-child(3n)) {
 }
 
 
-.active {
+.activeImg {
   transform: scale(1.1);
 }

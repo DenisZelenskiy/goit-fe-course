@@ -35,7 +35,6 @@
 //   }
 // ];
 
-
 //   function createGallery(arr) {
 
 //     const fullview = $cel("div", { className: "fullview" });
@@ -68,14 +67,12 @@
 
 //     result.push(fullview, list)
 
-
 //     $on(list, "click", changePreviewImg);
 
 //     function changePreviewImg(e) {
 //       const target = e.target;
 //       const srcFullview = target.dataset.fullview;
 //       const imgList = $qsa("img", list);
-
 
 //       if (target.nodeName !== "IMG") return;
 
@@ -84,7 +81,6 @@
 //       for (let img of imgList) {
 //         img.classList.remove('active');
 //       }
-
 
 //       target.className += " active";
 
@@ -129,28 +125,28 @@ const galleryItems = [
     alt: "alt text 6"
   }
 ];
-const imageGallery = $qs('.js-image-gallery');
-const activeValue = 3;
+const imageGallery = $qs(".js-image-gallery");
+const activeValue = 6;
 
 class Gallery {
   constructor({ items, parentNode, defaultActiveItem }) {
     this.items = items;
     this.parentNode = parentNode;
     this.defaultActiveItem = defaultActiveItem;
-    this.fullview = $cel('div', { className: "fullview" });
+    this.fullview = $cel("div", { className: "fullview" });
     this.imgFullview = $cel("img", { src: "#", alt: "" });
-    this.list = $cel('ul', { className: "list" });
+    this.list = $cel("ul", { className: "list" });
   }
 
-  createGalleryPreview() {
+  createPreviewList() {
     let idx = 1;
     for (let item of this.items) {
-      this.li = $cel('li', { className: "list__item" })
-      this.img = $cel('img', { className: `index-${idx}` })
+      this.li = $cel("li", { className: "list__item" });
+      this.img = $cel("img", { className: `index-${idx}` });
 
-      this.img.setAttribute('src', item.preview);
-      this.img.setAttribute('data-fullview', item.fullview);
-      this.img.setAttribute('alt', item.alt);
+      this.img.setAttribute("src", item.preview);
+      this.img.setAttribute("data-fullview", item.fullview);
+      this.img.setAttribute("alt", item.alt);
 
       this.li.append(this.img);
       this.list.append(this.li);
@@ -159,14 +155,95 @@ class Gallery {
     }
   }
 
-  
+  createActiveItem() {
+    const defaultImg = $qs(
+      `img[class=index-${this.defaultActiveItem}]`,
+      this.list
+    ).dataset.preview;
+    if (defaultImg === null) {
+      this.imgFullview.setAttribute(
+        "src",
+        $qs(`img[class=index-1]`, this.list).dataset.preview
+      );
+    } else {
+    }
+  }
 
+  createGallery() {
+    
+    // create list image
+    
+    let idx = 1;
+    for (let item of this.items) {
+      this.li = $cel("li", { className: "list__item" });
+      this.img = $cel("img", { className: `index-${idx}` });
 
+      this.img.setAttribute("src", item.preview);
+      this.img.setAttribute("data-fullview", item.fullview);
+      this.img.setAttribute("alt", item.alt);
+
+      this.li.append(this.img);
+      this.list.append(this.li);
+
+      idx += 1;
+    }
+    
+    // create active Fullview
+    
+    const activeImg = $qs(
+      `img[class=index-${this.defaultActiveItem}]`,
+      this.list
+    );
+
+    const defaultImg = $qs(`img[class=index-1]`, this.list);
+
+    if (activeImg !== null) {
+      this.imgFullview.setAttribute("src", activeImg.dataset.fullview);
+      activeImg.className += " activeImg";
+    } else {
+      defaultImg.className += " activeImg";
+      this.imgFullview.setAttribute("src", defaultImg.dataset.fullview);
+    }
+
+    this.fullview.append(this.imgFullview);
+    this.parentNode.append(this.fullview, this.list);
+    
+    //  ADD event click
+
+    $on(this.list, "click", event => {
+      const target = event.target;
+      const fullviewSRC = target.dataset.fullview;
+      const nodeName = target.nodeName;
+      const listImg = $qsa("img", this.list);
+
+      if (nodeName !== "IMG") return;
+
+      this.imgFullview.setAttribute("src", fullviewSRC);
+
+      listImg.forEach(img => img.classList.remove("activeImg"));
+
+      target.className += " activeImg";
+    });
+  }
 }
 
+const poly = new Gallery({
+  items: galleryItems,
+  parentNode: imageGallery,
+  defaultActiveItem: activeValue
+});
 
-const test = new Gallery({ items: galleryItems, parentNode: imageGallery, defaultActiveItem: activeValue })
+const mango = new Gallery({
+  items: galleryItems,
+  parentNode: imageGallery,
+  defaultActiveItem: activeValue
+});
+const ajax = new Gallery({
+  items: galleryItems,
+  parentNode: imageGallery,
+  defaultActiveItem: activeValue
+});
 
-console.log(test);
-
-
+poly.createGallery();
+mango.createGallery();
+ajax.createGallery();
