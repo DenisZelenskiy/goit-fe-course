@@ -125,7 +125,7 @@ const galleryItems = [
     alt: "alt text 6"
   }
 ];
-const imageGallery = $qs(".js-image-gallery");
+const imageGallery = document.querySelector(".js-image-gallery");
 const activeValue = 6;
 
 class Gallery {
@@ -133,9 +133,16 @@ class Gallery {
     this.items = items;
     this.parentNode = parentNode;
     this.defaultActiveItem = defaultActiveItem;
-    this.fullview = $cel("div", { className: "fullview" });
-    this.imgFullview = $cel("img", { src: "#", alt: "" });
-    this.list = $cel("ul", { className: "list" });
+    this.fullview = document.createElement("div");
+    this.fullview.setAttribute("class", "fullview");
+
+    this.imgFullview = document.createElement("img");
+    this.imgFullview.setAttribute("src", '#');
+    this.imgFullview.setAttribute("alt", 'fullview image');
+
+
+    this.list = document.createElement("ul");
+    this.list.setAttribute("class", "list");
   }
 
   createGallery() {
@@ -144,8 +151,11 @@ class Gallery {
 
     let idx = 1;
     for (let item of this.items) {
-      this.li = $cel("li", { className: "list__item" });
-      this.img = $cel("img", { className: `index-${idx}` });
+      this.li = document.createElement('li');
+      this.li.setAttribute('class', "list__item");
+
+      this.img = document.createElement('img');
+      this.img.setAttribute('class', `index-${idx}`)
 
       this.img.setAttribute("src", item.preview);
       this.img.setAttribute("data-fullview", item.fullview);
@@ -159,20 +169,23 @@ class Gallery {
 
     // create active Fullview
 
-    const activeImg = $qs(
-      `img[class=index-${this.defaultActiveItem}]`,
-      this.list
+    const activeImg = this.list.querySelector(
+      `img[class=index-${this.defaultActiveItem}]`
     );
 
-    const defaultImg = $qs(`img[class=index-1]`, this.list);
+    const defaultImg = this.list.querySelector(`img[class=index-1]`);
+
+    const classActiveimg = "activeImg"
 
     if (activeImg !== null) {
-      this.imgFullview.setAttribute("src", activeImg.dataset.fullview);
-      activeImg.className += " activeImg";
+      this.imgFullview.src = activeImg.dataset.fullview;
+      activeImg.classList.add(classActiveimg);
     } else {
-      defaultImg.className += " activeImg";
-      this.imgFullview.setAttribute("src", defaultImg.dataset.fullview);
+      this.imgFullview.src = defaultImg.dataset.fullview;
+      defaultImg.classList.add(classActiveimg);
     }
+
+    // HTML add FULLVIEW && LIST 
 
     this.fullview.append(this.imgFullview);
     this.parentNode.append(this.fullview, this.list);
@@ -183,15 +196,17 @@ class Gallery {
       const target = event.target;
       const fullviewSRC = target.dataset.fullview;
       const nodeName = target.nodeName;
-      const listImg = $qsa("img", this.list);
+      const listImg = this.list.querySelectorAll("img");
+
 
       if (nodeName !== "IMG") return;
 
       this.imgFullview.setAttribute("src", fullviewSRC);
 
-      listImg.forEach(img => img.classList.remove("activeImg"));
+      listImg.forEach(img => img.classList.remove(classActiveimg));
 
-      target.className += " activeImg";
+      target.classList.add(classActiveimg)
+
     });
   }
 }
