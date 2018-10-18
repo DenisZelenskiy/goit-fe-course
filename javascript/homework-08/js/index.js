@@ -138,41 +138,10 @@ class Gallery {
     this.list = $cel("ul", { className: "list" });
   }
 
-  createPreviewList() {
-    let idx = 1;
-    for (let item of this.items) {
-      this.li = $cel("li", { className: "list__item" });
-      this.img = $cel("img", { className: `index-${idx}` });
-
-      this.img.setAttribute("src", item.preview);
-      this.img.setAttribute("data-fullview", item.fullview);
-      this.img.setAttribute("alt", item.alt);
-
-      this.li.append(this.img);
-      this.list.append(this.li);
-
-      idx += 1;
-    }
-  }
-
-  createActiveItem() {
-    const defaultImg = $qs(
-      `img[class=index-${this.defaultActiveItem}]`,
-      this.list
-    ).dataset.preview;
-    if (defaultImg === null) {
-      this.imgFullview.setAttribute(
-        "src",
-        $qs(`img[class=index-1]`, this.list).dataset.preview
-      );
-    } else {
-    }
-  }
-
   createGallery() {
-    
+
     // create list image
-    
+
     let idx = 1;
     for (let item of this.items) {
       this.li = $cel("li", { className: "list__item" });
@@ -187,9 +156,9 @@ class Gallery {
 
       idx += 1;
     }
-    
+
     // create active Fullview
-    
+
     const activeImg = $qs(
       `img[class=index-${this.defaultActiveItem}]`,
       this.list
@@ -207,7 +176,7 @@ class Gallery {
 
     this.fullview.append(this.imgFullview);
     this.parentNode.append(this.fullview, this.list);
-    
+
     //  ADD event click
 
     $on(this.list, "click", event => {
@@ -233,17 +202,17 @@ const poly = new Gallery({
   defaultActiveItem: activeValue
 });
 
-const mango = new Gallery({
-  items: galleryItems,
-  parentNode: imageGallery,
-  defaultActiveItem: activeValue
-});
-const ajax = new Gallery({
-  items: galleryItems,
-  parentNode: imageGallery,
-  defaultActiveItem: activeValue
-});
+// const mango = new Gallery({
+//   items: galleryItems,
+//   parentNode: imageGallery,
+//   defaultActiveItem: activeValue
+// });
+// const ajax = new Gallery({
+//   items: galleryItems,
+//   parentNode: imageGallery,
+//   defaultActiveItem: activeValue
+// });
 
 poly.createGallery();
-mango.createGallery();
-ajax.createGallery();
+// mango.createGallery();
+// ajax.createGallery();

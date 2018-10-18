@@ -18,10 +18,16 @@ ul {
   width: 1000px;
 }
 
-
+.fullview {
+  margin-bottom: 30px;
+}
 
 li:not(:nth-child(3n)) {
   margin-right: 20px;
+}
+
+li {
+  margin-bottom: 15px;
 }
 
 
