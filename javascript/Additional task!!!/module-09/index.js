@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 //  TASK 01
 
 // const colors = [
@@ -50,47 +50,23 @@
 
 //        TASK  02
 
-/* 
-  Напишите функцию getFormattedTime(time), которая 
-  получает time - кол-во миллисекунд и возвращает 
-  строку времени в формате xx:xx.x, 01:23.6, минуты:секунды.миллисекунды.
-  
-  Из миллисекунд нам интересен только разряд с сотнями,
-  то есть если сейчас 831мс то нам интересна исключительно цифра 8.
-*/
-
 // function getFormattedTime(time) {
-//   return "";
+
+//   let minute = parseInt((time / 1000 / 60) % 60)
+//   let second = parseInt((time / 1000) % 60);
+//   let milisecond = parseInt((time % 1000) / 100)
+
+//   if (minute < 10) minute = "0" + minute;
+//   if (second < 10) second = "0" + second;
+
+//   return `${minute}:${second}:${milisecond}`
 // }
 
 // console.log(getFormattedTime(1523621052858)); // 04:12.8
-
 // console.log(getFormattedTime(1523621161159)); // 06:01.1
-
 // console.log(getFormattedTime(1523621244239)); // 07:24.2
 
 //          TASK  03
-
-/* 
-  Напишите скрипт, реализующий базовый функционал
-  таймера, запуск отсчета времени и сброс счетчика
-  в исходное состояние.
-  
-  Создайте функцию startTimer, которая будет запускать
-  отсчет времени с момента ее нажатия, она вызывается 
-  при клике на кнопку с классом js-timer-start.
-  
-  Создайте функцию stopTimer, которая будет останавливать
-  счетчик, она вызывается при клике на кнопку с классом js-timer-stop.
-  
-  Используйте вспомогательную функцию updateClockface 
-  которая обновляет значение счетчика в интерфейсе. 
-  Для составления строки времени в формате xx:xx.x, 
-  исользуйте функцию getFormattedTime из задания номер 1.
-  
-  Подсказка: так как нам интересны исключительно сотни миллисекунд,
-      нет смысла выполнять пересчет времени чаще чем каждые 100мс.
-*/
 
 // const clockface = document.querySelector(".js-clockface");
 // const startBtn = document.querySelector(".js-timer-start");
@@ -102,23 +78,73 @@
 //   id: null
 // };
 
-// /*
-// * Вспомогательные функции
-// */
+// class Timer {
+//   constructor(startTime = null, deltaTime = null, id = null) {
+//     this.startTime = null;
+//     this.deltaTime = null;
+//     this.id = null;
+//     this.isActive = false;
+//     this.pauseTime = 0;
+//   }
+//   startTimer() {
+//     if (!this.isActive) {
+//       this.isActive = true;
+//       this.startTime = Date.now();
 
-// /*
-// * Обновляет поле счетчика новым значением при вызове
-// * аргумент time это кол-во миллисекунд
-// */
-// function updateClockface(elem, time) {
-//   // Используйте функцию getFormattedTime из задания #1
-//   // elem.textContent = getFormattedTime(time);
+//       this.id = setInterval(() => {
+//         this.currentTime = Date.now();
+//         this.deltaTime = (this.currentTime - this.startTime) + this.pauseTime;
+//         updateClockface(clockface, this.deltaTime)
+//       }, 100);
+//     }
+//   }
+//   stopTimer() {
+//     this.pauseTime = this.deltaTime
+//     clearInterval(this.id)
+//     this.isActive = false;
+//     this.deltaTime = 0;
+//     this.startTime = null;
+//   }
+
+
+
 // }
 
-// /*
-// * Подсветка активной кнопки
-// */
-// function setActiveBtn(target) {
+// const newTimer = new Timer(timer);
+
+// function getFormattedTime(time) {
+
+//   let minute = parseInt((time / 1000 / 60) % 60)
+//   let second = parseInt((time / 1000) % 60);
+//   let milisecond = parseInt((time % 1000) / 100)
+
+//   if (minute < 10) minute = "0" + minute;
+//   if (second < 10) second = "0" + second;
+
+//   return `${minute}:${second}.${milisecond}`
+// }
+// // /*
+// // * Вспомогательные функции
+// // */
+
+// // /*
+// // * Обновляет поле счетчика новым значением при вызове
+// // * аргумент time это кол-во миллисекунд
+// // */
+// function updateClockface(elem, time) {
+
+//   elem.textContent = getFormattedTime(time);
+// }
+
+// startBtn.addEventListener('click', newTimer.startTimer.bind(newTimer))
+// stopBtn.addEventListener('click', newTimer.stopTimer.bind(newTimer))
+// startBtn.addEventListener('focusin', setActiveBtn);
+// stopBtn.addEventListener('focusin', setActiveBtn);
+
+// // /*
+// // * Подсветка активной кнопки
+// // */
+// function setActiveBtn({target}) {
 //   if (target.classList.contains("active")) {
 //     return;
 //   }
@@ -157,6 +183,24 @@
 
 // let goodsAmount = 100;
 
+// function processOrder(amount, delay = DELAY) {
+
+//   const promise = new Promise((resolve, reject) => {
+//     setTimeout(callback, delay)
+//   }
+
+//   )
+
+//   function callback() {
+//     resolve(amount <= goodsAmount ? 'Ваш заказ готов!' : 'К сожалению на складе не достаточно товаров!')
+//     reject("Некорректный ввод!")
+//   }
+
+
+// }
+
+
+
 // // Вызовы функции для проверки
 // processOrder(50)
 //   .then(x => console.log(x)) // Ваш заказ готов!
@@ -173,3 +217,4 @@
 // processOrder("qwe")
 //   .then(x => console.log(x))
 //   .catch(err => console.log(err)); // Некоректный ввод!
+

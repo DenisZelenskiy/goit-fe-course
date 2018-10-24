@@ -152,10 +152,10 @@ class Gallery {
     let idx = 1;
     for (let item of this.items) {
       this.li = document.createElement('li');
-      this.li.setAttribute('class', "list__item");
+      this.li.classList.add("list__item");
 
       this.img = document.createElement('img');
-      this.img.setAttribute('class', `index-${idx}`)
+      this.img.classList.add(`index-${idx}`);
 
       this.img.setAttribute("src", item.preview);
       this.img.setAttribute("data-fullview", item.fullview);

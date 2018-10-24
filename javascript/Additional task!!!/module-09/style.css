@@ -34,8 +34,8 @@
       0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
   } */
 
-/* TASK  03 */
-/* * {
+/* TASK  03 */ 
+ {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -77,4 +77,4 @@ body {
 
 .active {
   background-color: #2196f3;
-} */
+}
