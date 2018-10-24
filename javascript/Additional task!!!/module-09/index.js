@@ -159,62 +159,85 @@
 //    TASK   04
 
 
-/*
-  Напишите скрипт работы магазина со складом товаров.
-  
-  Есть переменная goodsAmount хранящиая в себе
-  текущее количество единиц какого-то товара на складе.
-  
-  Напишите функцию processOrder(amount), получающую
-  кол-во товаров заказанных покупателем, и возвращающую промис.
-  
-  Для имитации проверки достаточного количества товаров
-  на складе используйте setTimeout с delay 500мс.
-  
-  Если на складе товаров больше либо равно заказанному
-  количеству, "верните" строку - "Ваш заказ готов!".
-  
-  В противном случае - "К сожалению на складе не достаточно товаров!".
-  
-  Если же пользователь ввел не число, то выдайте ошибку throw new Error("Некорректный ввод!")  
-*/
+const DELAY = 1000;
 
-// const DELAY = 1000;
+let goodsAmount = 100;
 
-// let goodsAmount = 100;
+const processOrder = amount => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if ((typeof amount) !== "number") {
+        reject("Некорректный ввод!", (typeof amount))
+      }
 
-// function processOrder(amount, delay = DELAY) {
-
-//   const promise = new Promise((resolve, reject) => {
-//     setTimeout(callback, delay)
-//   }
-
-//   )
-
-//   function callback() {
-//     resolve(amount <= goodsAmount ? 'Ваш заказ готов!' : 'К сожалению на складе не достаточно товаров!')
-//     reject("Некорректный ввод!")
-//   }
+      if (goodsAmount >= amount) {
+        resolve("Ваш заказ готов!")
+      } else {
+        resolve("К сожалению на складе не достаточно товаров!")
+      }
 
 
-// }
-
+    }, DELAY);
+  })
+}
 
 
 // // Вызовы функции для проверки
-// processOrder(50)
-//   .then(x => console.log(x)) // Ваш заказ готов!
-//   .catch(err => console.log(err));
+processOrder(50)
+  .then(x => console.log(x)) // Ваш заказ готов!
+  .catch(err => console.log(err));
 
-// processOrder(50)
-//   .then(x => console.log(x)) // Ваш заказ готов!
-//   .catch(err => console.log(err));
+processOrder(50)
+  .then(x => console.log(x)) // Ваш заказ готов!
+  .catch(err => console.log(err));
 
-// processOrder(500)
-//   .then(x => console.log(x)) // К сожалению на складе недостаточно товаров!
-//   .catch(err => console.log(err));
+processOrder(500)
+  .then(x => console.log(x)) // К сожалению на складе недостаточно товаров!
+  .catch(err => console.log(err));
 
-// processOrder("qwe")
-//   .then(x => console.log(x))
-//   .catch(err => console.log(err)); // Некоректный ввод!
+processOrder("qwe")
+  .then(x => console.log(x))
+  .catch(err => console.log(err)); // Некоректный ввод!
 
+
+
+// const checkNumber = num => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (num % 2 === 0) {
+//         resolve('Even!!!! Sucess!!!!')
+//       }
+//       else {
+//         reject('Odd!!!! Fail!!!!')
+//       }
+//     }, 1000);
+//   })
+// }
+
+// checkNumber(12).then(value => console.log(value)).catch(err => console.log(err))
+
+
+// const DISTANCE = 1000;
+
+// const race = (name, speed) => {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve(`[${name}] cross by finish!!!`)
+//     }, (DISTANCE / speed) * 1000);
+//   })
+// }
+
+
+// const mango = race('mango', 500)
+// const poly = race('poly', 300)
+// const ajax = race('ajax', 400)
+
+
+// Promise.all([mango,poly,ajax]).then(arr => console.log(arr))
+// Promise.race([mango,poly,ajax]).then(val => console.log(val))
+
+// mango.then(value => console.log(value))
+
+// poly.then(value => console.log(value))
+
+// ajax.then(value => console.log(value))
