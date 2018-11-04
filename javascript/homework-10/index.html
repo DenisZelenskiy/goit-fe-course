@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <button class='btn js-get'>GET</button>
+            <ul class="list js-list"></ul>
+        </div>
+
+        <div>
+            <form class="search-form">
+                <input class="input inputById" type="text" placeholder="Plase enter id">
+                <button class="btn js-getId" type='submit'>GETUserByID</button>
+            </form>
+            <ul class="list js-list-user"></ul>
+        </div>
+
+        <div>
+            <form class="add-form">
+                <input type="text" class="js-name" placeholder="Please entry name">
+                <input type="text" class="js-age" placeholder="Please entry age">
+                <button type="submit" class="js-add">POST</button>
+            </form>
+            <p class="result"></p>
+
+        </div>
+
+        <div>
+            <form class="delete-form">
+                <input type="text" class="js-id" placeholder="Please entry ID">
+                <button type="submit" class="js-delete">DELETE</button>
+            </form>
+        </div>
+
+        <div>
+            <form class="update-form">
+                <input placeholder="Please entry name" type="text" class="js-name-up">
+                <input placeholder="Please entry age" type="text" class="js-age-up">
+                <input placeholder="Please entry id" type="text" class="js-id-up">
+                <button type='submit' class="js-update">UPDATE</button>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
