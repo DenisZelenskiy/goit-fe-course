@@ -102,20 +102,13 @@ const template = Handlebars.compile(source);
 const filter = e => {
   e.preventDefault();
 
-  const size =
-    form.querySelectorAll('input[name="size"]:checked').length > 0
-      ? [...form.querySelectorAll('input[name="size"]:checked')]
-      : [...form.querySelectorAll('input[name="size"]')];
+  const size = [...form.querySelectorAll('input[name="size"]:checked')];
 
-  const color =
-    form.querySelectorAll('input[name="color"]:checked').length > 0
-      ? [...form.querySelectorAll('input[name="color"]:checked')]
-      : [...form.querySelectorAll('input[name="color"]')];
+  const color = [...form.querySelectorAll('input[name="color"]:checked')];
 
-  const release_date =
-    document.querySelectorAll('input[name="release_date"]:checked').length > 0
-      ? [...form.querySelectorAll('input[name="release_date"]:checked')]
-      : [...form.querySelectorAll('input[name="release_date"]')];
+  const release_date = [
+    ...document.querySelectorAll('input[name="release_date"]:checked')
+  ];
 
   const objFilter = {
     size: size.map(elem => Number(elem.value)),
@@ -123,19 +116,29 @@ const filter = e => {
     release_date: release_date.map(elem => Number(elem.value))
   };
 
-  const laptopsFilter = laptops.filter(
-    lap =>
-      objFilter.size.includes(lap.size) &&
-      objFilter.color.includes(lap.color) &&
-      objFilter.release_date.includes(lap.release_date)
-  );
+  const laptopsFilter = laptops.filter(lap => {
+    if (objFilter.size > 0) {
+      objFilter.size.includes(lap.size);
+    } else {
+      return true;
+    }
+    if (objFilter.color > 0) {
+      objFilter.color.includes(lap.color);
+    } else {
+      return true;
+    }
+    if (objFilter.release_date > 0) {
+      objFilter.release_date.includes(lap.release_date);
+    } else {
+      return true;
+    }
+  });
 
   // CREATE HTML
   const markup = laptopsFilter.reduce((acc, lap) => (acc += template(lap)), "");
 
   cards.innerHTML = markup;
 
-  form.reset();
 };
 
 form.addEventListener("submit", filter);
