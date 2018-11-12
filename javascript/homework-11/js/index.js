@@ -139,6 +139,8 @@ const filter = e => {
 
   cards.innerHTML = markup;
 
+  
+
 };
 
 form.addEventListener("submit", filter);
