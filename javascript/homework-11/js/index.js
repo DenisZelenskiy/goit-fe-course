@@ -99,121 +99,50 @@ const source = document.querySelector(".template-card").innerHTML.trim();
 
 const template = Handlebars.compile(source);
 
-// const filter = e => {
-//   e.preventDefault();
+const filter = e => {
+  e.preventDefault();
 
-//   const size = [...form.querySelectorAll('input[name="size"]:checked')];
+  const size = [...form.querySelectorAll('input[name="size"]:checked')];
 
-//   const color = [...form.querySelectorAll('input[name="color"]:checked')];
+  const color = [...form.querySelectorAll('input[name="color"]:checked')];
 
-//   const release_date = [
-//     ...document.querySelectorAll('input[name="release_date"]:checked')
-//   ];
+  const release_date = [
+    ...document.querySelectorAll('input[name="release_date"]:checked')
+  ];
 
-//   const objFilter = {
-//     size: size.map(elem => Number(elem.value)),
-//     color: color.map(elem => elem.value),
-//     release_date: release_date.map(elem => Number(elem.value))
-//   };
-
-//   const laptopsFilter = laptops.filter(lap => {
-//     if (objFilter.size > 0) {
-//       objFilter.size.includes(lap.size);
-//     } else {
-//       return true;
-//     }
-//     if (objFilter.color > 0) {
-//       objFilter.color.includes(lap.color);
-//     } else {
-//       return true;
-//     }
-//     if (objFilter.release_date > 0) {
-//       objFilter.release_date.includes(lap.release_date);
-//     } else {
-//       return true;
-//     }
-//   });
-
-//   // CREATE HTML
-//   const markup = laptopsFilter.reduce((acc, lap) => (acc += template(lap)), "");
-
-//   cards.innerHTML = markup;
-// };
-
-// form.addEventListener("submit", filter);
-// reset.addEventListener("click", () => {
-//   cards.innerHTML = "";
-// });
-
-{
-  const source = document.querySelector(".template-card").innerHTML.trim();
-
-  const template = Handlebars.compile(source);
-
-  const filter = e => {
-    e.preventDefault();
-
-    const size = [...form.querySelectorAll('input[name="size"]:checked')];
-
-    const color = [...form.querySelectorAll('input[name="color"]:checked')];
-
-    const release_date = [
-      ...document.querySelectorAll('input[name="release_date"]:checked')
-    ];
-
-    const objTest = [...document.querySelectorAll("input[name]")].reduce(
-      (acc, input) => {
-        let key = input.name;
-        let value = input.value;
-        if (acc.hasOwnProperty(`${key}`)) {
-          acc[key].push(value);
-        } else {
-          acc[key] = [];
-          acc[key].push(value);
-        }
-
-        return acc;
-      },
-      {}
-    );
-
-    console.log(objTest);
-
-    const objFilter = {
-      size: size.map(elem => Number(elem.value)),
-      color: color.map(elem => elem.value),
-      release_date: release_date.map(elem => Number(elem.value))
-    };
-
-    const laptopsFilter = laptops.filter(lap => {
-      if (objFilter.size > 0) {
-        objFilter.size.includes(lap.size);
-      } else {
-        return true;
-      }
-      if (objFilter.color > 0) {
-        objFilter.color.includes(lap.color);
-      } else {
-        return true;
-      }
-      if (objFilter.release_date > 0) {
-        objFilter.release_date.includes(lap.release_date);
-      } else {
-        return true;
-      }
-    });
-
-    // CREATE HTML
-    const markup = laptopsFilter.reduce(
-      (acc, lap) => (acc += template(lap)),
-      ""
-    );
-
-    cards.innerHTML = markup;
+  const objFilter = {
+    size: size.map(elem => Number(elem.value)),
+    color: color.map(elem => elem.value),
+    release_date: release_date.map(elem => Number(elem.value))
   };
 
-  form.addEventListener("submit", filter);
-  reset.addEventListener("click", () => {
-    cards.innerHTML = "";
+  const laptopsFilter = laptops.filter(lap => {
+    if (objFilter.size > 0) {
+      objFilter.size.includes(lap.size);
+    } else {
+      return true;
+    }
+    if (objFilter.color > 0) {
+      objFilter.color.includes(lap.color);
+    } else {
+      return true;
+    }
+    if (objFilter.release_date > 0) {
+      objFilter.release_date.includes(lap.release_date);
+    } else {
+      return true;
+    }
   });
-}
+
+  // CREATE HTML
+  const markup = laptopsFilter.reduce((acc, lap) => (acc += template(lap)), "");
+
+  cards.innerHTML = markup;
+};
+
+form.addEventListener("submit", filter);
+reset.addEventListener("click", () => {
+  cards.innerHTML = "";
+});
+
+
