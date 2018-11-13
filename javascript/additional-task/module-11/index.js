@@ -62,10 +62,121 @@
   Результат проверки, объект, выводить в консоль.
 */
 
-const firstname = document.getElementById("first_name");
-const lastname = document.getElementById("last_name");
-const submitBtn = document.getElementById("submit-btn");
+// const firstname = document.getElementById("first_name");
+// const lastname = document.getElementById("last_name");
+// const submitBtn = document.getElementById("submit-btn");
 
-submitBtn.addEventListener("click", validate);
+// submitBtn.addEventListener("click", validate);
 
-function validate(evt) {}
+// function validate(evt) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const str = 'The quick brown fox jumps over quick the lazy dog';
+
+const paternA = /quick/;
+const paternB = /qwerty/;
+const paternC = 'quick';
+
+console.log(`Результат : ${paternA.test(str)}`);
+console.log(`Результат : ${paternB.test(str)}`);
+
+console.log(`Результат : ${paternA.exec(str)}`);
+console.log(`Результат : ${paternB.exec(str)}`);
+
+console.log(`Результат : ${str.search(paternA)}`);
+console.log(`Результат : ${str.search(paternB)}`);
+
+// const patern = /quick/g;
+
+// console.log(str.match(patern));
+
+const patern = /brown/;
+
+console.log(`str.replace(patern) : ${str.replace(patern, 'red')}`);
+
+console.log('14-15-24'.replace(/-/g, ':'));
+
+{
+  const str = `1758-1982-7841-2275`;
+  const pattern = /-/g;
+
+  console.log('str.split(pattern) :', str.split());
+  console.log('str.split(pattern) :', str.split(pattern, 3));
+}
+
+{
+  const strA = 'quick brown fox';
+  const strB = 'the  brown fox';
+
+  const pattern = /^quick/;
+
+  console.log(`Результат : ${pattern.test(strA)}`);
+  console.log(pattern.test(strB));
+}
+
+{
+  const strA = 'brown fox quick';
+  const strB = 'the quick brown fox';
+  const pattern = /quick$/;
+
+  console.log(`Результат : ${pattern.test(strA)}`);
+  console.log(`Результат : ${pattern.test(strB)}`);
+}
+
+{
+  const strA = 'brown fox quick';
+  const strB = 'quickquickquick';
+
+  const pattern = /^quick$/;
+
+  console.log(pattern.test(strA))
+  console.log(pattern.test(strB))
+}
+
+{
+  const str = 'The quICK The quiCk The quIcK';
+  const pattern = /quick/i;
+
+  const result = str.match(pattern);
+
+  console.log(result);
+}
+
+{
+  const str = 'The quick The quick The quick';
+  const pattern = /quick/g;
+
+  console.log(str.match(pattern));
+
+
+}
