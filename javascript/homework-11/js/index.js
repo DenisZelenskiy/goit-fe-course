@@ -116,24 +116,30 @@ const filter = e => {
     release_date: release_date.map(elem => Number(elem.value))
   };
 
-  const laptopsFilter = laptops.filter(lap => {
-    if (objFilter.size > 0) {
-      objFilter.size.includes(lap.size);
-    } else {
-      return true;
-    }
-    if (objFilter.color > 0) {
-      objFilter.color.includes(lap.color);
-    } else {
-      return true;
-    }
-    if (objFilter.release_date > 0) {
-      objFilter.release_date.includes(lap.release_date);
-    } else {
-      return true;
-    }
-  });
+  let isSize;
+  let isColor;
+  let isRelease_date;
 
+  const laptopsFilter = laptops.filter(lap => {
+    if (objFilter.size.length > 0) {
+      isSize = objFilter.size.includes(lap.size);
+    } else {
+      isSize = true;
+    }
+    if (objFilter.color.length > 0) {
+      isColor = objFilter.color.includes(lap.color);
+    } else {
+      isColor = true;
+    }
+    if (objFilter.release_date.length > 0) {
+      isRelease_date = objFilter.release_date.includes(lap.release_date);
+    } else {
+      isRelease_date = true;
+    }
+
+    return isSize && isColor && isRelease_date;
+  });
+  console.log(laptopsFilter);
   // CREATE HTML
   const markup = laptopsFilter.reduce((acc, lap) => (acc += template(lap)), "");
 
