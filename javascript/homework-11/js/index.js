@@ -102,44 +102,44 @@ const template = Handlebars.compile(source);
 const filter = e => {
   e.preventDefault();
 
-  const size = [...form.querySelectorAll('input[name="size"]:checked')];
+  const filter = [...document.querySelectorAll("input:checked")].reduce(
+    (acc, { name, value }) => {
+      if (!acc.hasOwnProperty(name)) {
+        acc[name] = [];
+      }
 
-  const color = [...form.querySelectorAll('input[name="color"]:checked')];
+      acc[name].push(value);
 
-  const release_date = [
-    ...document.querySelectorAll('input[name="release_date"]:checked')
-  ];
-
-  const objFilter = {
-    size: size.map(elem => Number(elem.value)),
-    color: color.map(elem => elem.value),
-    release_date: release_date.map(elem => Number(elem.value))
-  };
+      return acc;
+    },
+    {}
+  );
 
   let isSize;
   let isColor;
   let isRelease_date;
 
   const laptopsFilter = laptops.filter(lap => {
-    if (objFilter.size.length > 0) {
-      isSize = objFilter.size.includes(lap.size);
+
+    if (filter.size) {
+      isSize = filter.size.includes(String(lap.size));
     } else {
       isSize = true;
     }
-    if (objFilter.color.length > 0) {
-      isColor = objFilter.color.includes(lap.color);
+    if (filter.color) {
+      isColor = filter.color.includes(lap.color);
     } else {
       isColor = true;
     }
-    if (objFilter.release_date.length > 0) {
-      isRelease_date = objFilter.release_date.includes(lap.release_date);
+    if (filter.release_date) {
+      isRelease_date = filter.release_date.includes(String(lap.release_date));
     } else {
       isRelease_date = true;
     }
-
+    console.log(isSize && isColor && isRelease_date);
     return isSize && isColor && isRelease_date;
   });
-  console.log(laptopsFilter);
+
   // CREATE HTML
   const markup = laptopsFilter.reduce((acc, lap) => (acc += template(lap)), "");
 
@@ -150,5 +150,3 @@ form.addEventListener("submit", filter);
 reset.addEventListener("click", () => {
   cards.innerHTML = "";
 });
-
-
