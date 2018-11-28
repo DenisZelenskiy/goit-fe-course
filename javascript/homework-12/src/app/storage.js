@@ -3,6 +3,6 @@ export const set = value => {
 };
 
 export const get = () => {
-  const data = localStorage.getItem(bookmarks);
+  const data = localStorage.getItem("bookmarks");
   return data ? JSON.parse(data) : null;
 };

@@ -1,62 +1,107 @@
-import listUrl from "./../templates/template.hbs";
+import axios from 'axios';
+import createListElem from "./../templates/template.hbs";
 import * as storage from "./storage";
 
-const bookmarks = [];
+const form = document.querySelector('.form-js');
+const input = document.querySelector('.input-js');
+const list = document.querySelector('.list-js');
+const pattern = /[a-z0-9-_]\.([a-z]{2,})/;
+const API_KEY = '5bfac41586ca505c353b82c68b844317d858f00d0518e';
+const spinner = document.querySelector('.box-1');
 
-const container = document.querySelector(".container-list");
-const button = document.querySelector(".button-js");
-const input = document.querySelector(".input-js");
-const form = document.querySelector(".form-js");
-listUrl;
-const list = document.querySelector(".list-js");
+const bookmraksStorageKey = 'bookmarks';
+const bookmarksStorage = storage.get('bookmarks');
+let bookmarks = bookmarksStorage ? bookmarksStorage : [];
 
-const createHtml = arr =>
-  arr.reduce((acc, value) => {
-    console.log("value ", value);
-    console.log(listUrl(value));
-    acc += listUrl({ value });
-    return acc;
-  }, "");
+if (bookmarks.length !== 0) addListPage(bookmarks);
 
-const handleAddUrl = event => {
-  event.preventDefault();
+let uniqueId;
 
-  const value = input.value;
+form.addEventListener('submit', handleClickAdd)
+list.addEventListener('click', handleClickDel)
 
-  if (value === "") {
-    alert("Вы ввели пустую строку");
+
+// ================= HELPERS ============
+function handleClickAdd(e) {
+  e.preventDefault();
+  axios
+  uniqueId = String(Date.now())
+
+  addBookmarkData()
+
+}
+function addDataStorage(uniqueId, { title, url, image }) {
+  bookmarks.unshift({ uniqueId, title, url, image });
+}
+function addBookmarkData() {
+  const value = input.value.trim();
+  const isValidUrl = pattern.test(value);
+
+  form.reset()
+
+
+  if (value === '') {
+    alert('Вы ввели пустую строку!!!')
     return;
   }
 
-  if (bookmarks.includes(value)) {
-    alert(`${value} такая закладка уже существует!`);
-    input.value = "";
+  if (!isValidUrl) {
+    alert('Не валидная URL')
     return;
   }
-  bookmarks.unshift(value);
-  console.log(bookmarks);
+  spinner.style.display = "block";
+  axios.get(`http://api.linkpreview.net/?key=${API_KEY}&q=${value}`).then(response => {
+    const isCopy = bookmarks.some(el => el.url === response.data.url);
+    spinner.style.display = "none";
 
-  console.log(createHtml(bookmarks));
 
-  form.reset();
-};
+    if (isCopy) {
+      alert('Такая закладка уже существует!!!')
+      return;
+    }
 
-const handleDeleteUrl = e => {
+    addDataStorage(uniqueId, response.data)
+    console.log(response.data);
+    storage.set(bookmarks)
+
+    addListPage(bookmarks);
+  }
+  ).catch(err => {
+    spinner.style.display = "none";
+    console.log(err);
+
+  })
+
+}
+
+function createList(arr) {
+  const markup = arr.reduce((acc, value) => {
+    acc += createListElem(value);
+    return acc
+  }, '')
+  console.log(markup);
+  return markup;
+
+}
+
+function addListPage(arr) {
+  list.innerHTML = createList(arr)
+}
+
+function handleClickDel(e) {
   const target = e.target;
   const nodeName = target.nodeName;
-  let value;
-  let index;
 
-  if (nodeName === "BUTTON") {
-    value = target.previousElementSibling.innerHTML;
-    index = bookmarks.indexOf(value);
 
-    bookmarks.splice(index, 1);
+  if (nodeName === 'BUTTON') {
+    const li = target.closest(".list-item-js")
+    const id = li.dataset.id;
+    bookmarks = bookmarks.filter(elem => elem.uniqueId !== id);
 
-    target.parentNode.remove();
+    storage.set(bookmarks);
+
+    li.remove()
+
   }
-};
 
-form.addEventListener("submit", handleAddUrl);
-
-list.addEventListener("click", handleDeleteUrl);
+}
