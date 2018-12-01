@@ -50,7 +50,7 @@ function addBookmarkData() {
     return;
   }
   spinner.style.display = "block";
-  axios.get(`http://api.linkpreview.net/?key=${API_KEY}&q=${value}`).then(response => {
+  axios.get(`https://api.linkpreview.net/?key=${API_KEY}&q=${value}`).then(response => {
     const isCopy = bookmarks.some(el => el.url === response.data.url);
     spinner.style.display = "none";
 
