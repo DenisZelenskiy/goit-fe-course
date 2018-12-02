@@ -1,0 +1,138 @@
+1. npm init -y  - создаём package.json;
+2. npm install webpack webpack-cli --save-dev   - ставим webpack;
+3. создаём папку public => index.html (болванка) && src => index.js (основной js);
+4. создаём скрипты в package.json(для запуска webpack)  -- "start": "webpack --mode development",
+    "build": "webpack --mode production"  ;
+5. создаём файл конфига в корне для webpack  - webpack.config.js
+6. пишем конфиг для webpack.config.js  
+7. babel --  rules: [
+      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },(https://babeljs.io/setup#installation)
+
+так же ставим babel-polyfill
+
+https://babeljs.io/docs/en/babel-polyfill
+
+
+
+8. html-webpack-plugin --  
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+plugins: [
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: "./public/index.html",
+      filename: "index.html"
+    })
+  ]
+  (https://webpack.js.org/plugins/html-webpack-plugin/)
+
+9. css -- npm install --save-dev style-loader css-loader sass-loader node-sass
+
+Добавляем загрузчик для css
+module: {
+    rules: [
+        {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: ['style-loader','css-loader']
+      }
+    ]
+}
+
+!сделать импорт в index.js!!
+import "./style.css";
+
+10. mini-extract-plugin  - 
+npm install --save-dev mini-css-extract-plugin
+
+добавляем загрузчик к css loaderam --
+use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader"]
+
+(https://github.com/webpack-contrib/mini-css-extract-plugin)
+
+11. SASS 
+{
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+          "style-loader",
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader"
+        ]
+      }
+
+!сделать импорт в index.js!!
+import "./test.scss";
+
+      https://www.sitepoint.com/beginners-guide-webpack-module-bundling/)
+
+12. POST-css (автопрефиксер , минификатор);
+
+npm install postcss-loader autoprefixer --save-dev
+создаём файл в корне - postcss.config.js
+
+вставляем конфиг - module.exports = {
+    plugins: [
+      require('autoprefixer')
+    ]
+}
+
+добавляем loader для css && scss
+use: [
+          "style-loader",
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader"
+        ]
+ 
+use: [
+          "style-loader",
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
+          "sass-loader"
+        ]
+
+13. Clean  -- npm install clean-webpack-plugin -D
+
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+добавляем поле в плагины  - new CleanWebpackPlugin('build'),
+
+14. Загрузчик картинок   -  
+npm install --save-dev file-loader 
+
+{ test: /\.(png|svg|jpg|gif)$/,
+        use: ['file-loader']
+  }
+
+!картинки импортируем в index.js!!!
+
+import imageUrl from "./img/img.jpeg";
+
+img.setAttribute("src", imageUrl);
+
+15. dev server  
+
+заменить в скрпитах -  
+"scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack-dev-server --mode production"
+  },
+
+добавить в webpack-config отдельное поле после плагинов --
+доп.настройки 
+
+devServer: {
+    historyApiFallback: true,
+    noInfo: false,
+    quiet: false,
+    stats: "errors-only",
+    clientLogLevel: "warning",
+    compress: true,
+    port: 9000
+  },
+
+(https://github.com/webpack/webpack-dev-server)
+
+16. axios , handlebars , normalize.css
